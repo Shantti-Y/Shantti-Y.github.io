@@ -1,0 +1,225 @@
+/***********************************************
+
+
+                     Layout
+
+
+***********************************************/
+body {
+  width: 1350px; }
+  body * {
+    font-family: "Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+/***********************************************
+
+
+                     Header
+
+
+***********************************************/
+#header {
+  z-index: 1;
+  position: fixed;
+  width: calc(100% - 32px);
+  background-color: green;
+  padding: 0 16px; }
+  #header nav {
+    height: 50px;
+    overflow: hidden; }
+    #header nav div#logos {
+      float: left;
+      margin: 13px;
+      font-size: 17px;
+      color: #ffffff; }
+      #header nav div#logos h3#collapsed-logo {
+        display: none; }
+    #header nav ul#navbars {
+      float: right;
+      overflow: hidden;
+      height: inherit; }
+      #header nav ul#navbars li {
+        display: block;
+        float: left;
+        vertical-align: middle;
+        height: inherit;
+        background-color: #ffffff; }
+        #header nav ul#navbars li a {
+          display: block;
+          height: inherit;
+          padding: 0 13px;
+          color: #ffffff;
+          text-decoration: none; }
+          #header nav ul#navbars li a * {
+            margin-top: 1rem; }
+          #header nav ul#navbars li a i {
+            margin-right: 7px; }
+          #header nav ul#navbars li a:hover {
+            opacity: 0.7; }
+        #header nav ul#navbars li:nth-child(1) {
+          background-color: #24292e; }
+        #header nav ul#navbars li:nth-child(2) {
+          background-color: #4267b2; }
+        #header nav ul#navbars li:nth-child(3) {
+          background-color: #db4437; }
+
+/***********************************************
+
+
+                     Footer
+
+
+***********************************************/
+#footer {
+  background-color: black;
+  padding: 30px 0 60px 0;
+  text-align: center; }
+  #footer h5#copyrights {
+    font-size: 15px;
+    color: #ffffff; }
+
+/***********************************************
+
+
+                     Main
+
+
+***********************************************/
+#main #top {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-image: url("../images/top_background.png");
+  background-size: 100%; }
+  #main #top #filter {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+    #main #top #filter div#top-items {
+      position: absolute;
+      top: 300px;
+      width: 100%;
+      text-align: center; }
+      #main #top #filter div#top-items * {
+        color: #ffffff; }
+      #main #top #filter div#top-items > * {
+        margin-bottom: 18px; }
+      #main #top #filter div#top-items h1#title {
+        font-size: 48px; }
+      #main #top #filter div#top-items h2#nickname {
+        font-size: 23px; }
+      #main #top #filter div#top-items ul#top-menus {
+        margin-top: 42px; }
+        #main #top #filter div#top-items ul#top-menus li.menu {
+          display: inline-block;
+          margin: 0 19px; }
+          #main #top #filter div#top-items ul#top-menus li.menu a {
+            text-decoration: none;
+            border: 1px solid #ffffff;
+            position: relative;
+            display: block;
+            width: 90px;
+            text-align: center;
+            padding: 29px 0 12px 0; }
+            #main #top #filter div#top-items ul#top-menus li.menu a i {
+              display: block;
+              width: 40px;
+              font-size: 27px;
+              background-color: gray;
+              padding: 5px 0;
+              border-radius: 12px;
+              position: absolute;
+              top: -19px;
+              left: calc(50% - 20px);
+              text-align: center; }
+#main div.main-content {
+  padding: 65px 120px;
+  overflow: hidden;
+  border-bottom: 1px solid gray; }
+#main h3.content-header {
+  float: left;
+  display: block;
+  width: 250px;
+  font-size: 40px;
+  margin-left: 40px; }
+  #main h3.content-header i {
+    margin-right: 12px; }
+#main div.content-elements {
+  float: right;
+  width: 640px; }
+#main #profile #profile-content {
+  overflow: hidden; }
+  #main #profile #profile-content img {
+    border: 5px solid black;
+    border-radius: 8px;
+    float: left;
+    width: 200px; }
+  #main #profile #profile-content #details {
+    float: right; }
+    #main #profile #profile-content #details #description {
+      width: 400px; }
+      #main #profile #profile-content #details #description p {
+        margin-top: 12px;
+        line-height: 150%; }
+    #main #profile #profile-content #details #career {
+      display: none; }
+#main #skills .skill-row .skill-box {
+  box-sizing: content-box;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 20px; }
+  #main #skills .skill-row .skill-box p.header {
+    font-weight: bold;
+    font-size: 19px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid gray; }
+  #main #skills .skill-row .skill-box ul li {
+    text-align: center;
+    display: inline-block;
+    margin: 25px 26px 0 26px; }
+    #main #skills .skill-row .skill-box ul li img {
+      height: 69px; }
+    #main #skills .skill-row .skill-box ul li span {
+      margin-top: 18px;
+      display: block; }
+  #main #skills .skill-row .skill-box:last-child {
+    margin: 0; }
+#main #works .work-row .work-box {
+  width: 100%;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+  #main #works .work-row .work-box img {
+    float: left;
+    width: 250px; }
+  #main #works .work-row .work-box div.description {
+    float: right;
+    width: calc(100% - 300px);
+    padding: 15px 24px 15px 12px; }
+    #main #works .work-row .work-box div.description h3 {
+      font-weight: bold;
+      font-size: 24px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid gray;
+      margin-bottom: 22px; }
+    #main #works .work-row .work-box div.description p {
+      margin-top: 6px;
+      line-height: 110%;
+      font-size: 13px; }
+    #main #works .work-row .work-box div.description ul * {
+      font-size: 13px; }
+#main #contact div.contact-info {
+  margin: 12px auto; }
+  #main #contact div.contact-info * {
+    display: inline-block; }
+  #main #contact div.contact-info i {
+    font-size: 34px;
+    margin-right: 6px; }
+  #main #contact div.contact-info p, #main #contact div.contact-info a {
+    font-size: 22px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,319 @@
+
+/***********************************************
+
+
+                     Layout
+
+
+***********************************************/
+
+body {
+   width: 1350px;
+   * {
+       font-family: "Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+   }
+}
+
+
+
+/***********************************************
+
+
+                     Header
+
+
+***********************************************/
+
+#header {
+   z-index: 1;
+   position: fixed;
+   width: calc(100% - 32px);
+   background-color: green;
+   padding: 0 16px;
+   nav {
+      height: 50px;
+      overflow: hidden;
+
+      div#logos {
+         float: left;
+         margin: 13px;
+         font-size: 17px;
+         color: #ffffff;
+
+         h2#main-logo {}
+         h3#collapsed-logo {
+            display: none;
+         }
+      }
+
+      ul#navbars {
+         float: right;
+         overflow: hidden;
+         height: inherit;
+         li {
+            display: block;
+            float: left;
+            vertical-align: middle;
+            height: inherit;
+            background-color: #ffffff;
+
+            a {
+               display: block;
+               height: inherit;
+               padding: 0 13px;
+               color: #ffffff;
+               text-decoration: none;
+               * { margin-top: 1rem; }
+
+               i { margin-right: 7px; }
+
+               &:hover {
+                  opacity: 0.7
+               }
+            }
+
+            &:nth-child(1) {
+               background-color: #24292e;
+            }
+            &:nth-child(2) {
+               background-color: #4267b2;
+            }
+            &:nth-child(3) {
+               background-color: #db4437;
+            }
+         }
+      }
+   }
+}
+
+/***********************************************
+
+
+                     Footer
+
+
+***********************************************/
+
+#footer {
+   background-color: black;
+   padding: 30px 0 60px 0;
+   text-align: center;
+
+   h5#copyrights {
+      font-size: 15px;
+      color: #ffffff;
+   }
+}
+
+/***********************************************
+
+
+                     Main
+
+
+***********************************************/
+
+#main {
+
+   #top {
+      position: relative;
+      width: 100%;
+      height: 700px;
+      background-image: url("../images/top_background.png");
+      background-size: 100%;
+
+      #filter {
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.7);
+
+         div#top-items {
+            position: absolute;
+            top: 300px;
+            width: 100%;
+            text-align: center;
+            * { color: #ffffff; }
+            > * { margin-bottom: 18px; }
+
+            h1#title { font-size: 48px; }
+            h2#nickname { font-size: 23px; }
+
+            ul#top-menus {
+               margin-top: 42px;
+               li.menu {
+                  display: inline-block;
+                  margin: 0 19px;
+                  a {
+                     text-decoration: none;
+                     border: 1px solid #ffffff;
+                     position: relative;
+                     display: block;
+                     width: 90px;
+                     text-align: center;
+                     padding: 29px 0 12px 0;
+                     i {
+                        display: block;
+                        width: 40px;
+                        font-size: 27px;
+                        background-color: gray;
+                        padding: 5px 0;
+                        border-radius: 12px;
+                        position: absolute;
+                        top: -19px;
+                        left: calc(50% - 20px);
+                        text-align: center;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   div.main-content {
+      padding: 65px 120px;
+      overflow: hidden;
+      border-bottom: 1px solid gray;
+   }
+
+   h3.content-header {
+      float: left;
+      display: block;
+      width: 250px;
+      font-size: 40px;
+      margin-left: 40px;
+      i { margin-right: 12px; }
+   }
+
+   div.content-elements {
+      float: right;
+      width: 640px;
+   }
+
+   #profile {
+
+      #profile-content {
+         overflow: hidden;
+         img {
+            border: 5px solid black;
+            border-radius: 8px;
+            float: left;
+            width: 200px;
+         }
+
+         #details {
+            float: right;
+            #description {
+               width: 400px;
+
+               p {
+                  margin-top: 12px;
+                  line-height: 150%;
+               }
+            }
+
+            #career {
+               display: none;
+            }
+         }
+      }
+
+   }
+
+   #skills {
+      .skill-row {
+         .skill-box {
+            box-sizing: content-box;
+            width: 100%;
+            display: inline-block;
+            border: 1px solid gray;
+            border-radius: 4px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+
+            p.header {
+               font-weight: bold;
+               font-size: 19px;
+               padding-bottom: 9px;
+               border-bottom: 1px solid gray;
+            }
+
+            ul {
+               li {
+                  text-align: center;
+                  display: inline-block;
+                  margin: 25px 26px 0 26px;
+                  img {
+                     height: 69px;
+                  }
+                  span {
+                     margin-top: 18px;
+                     display: block;
+                  }
+               }
+            }
+
+            &:last-child {
+               margin: 0;
+            }
+         }
+      }
+   }
+
+   #works {
+      .work-row {
+         .work-box {
+            width: 100%;
+            box-sizing: content-box;
+            display: inline-block;
+            border: 1px solid gray;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            img {
+               float: left;
+               width: 250px;
+            }
+
+            div.description {
+               float: right;
+               width: calc(100% - 300px);
+               padding: 15px 24px 15px 12px;
+
+               h3 {
+                  font-weight: bold;
+                  font-size: 24px;
+                  padding-bottom: 9px;
+                  border-bottom: 1px solid gray;
+                  margin-bottom: 22px;
+               }
+               p {
+                  margin-top: 6px;
+                  line-height: 110%;
+                  font-size: 13px;
+               }
+               ul {
+                  * { font-size: 13px; }
+               }
+            }
+         }
+      }
+   }
+
+   #contact {
+
+      div.contact-info {
+         margin: 12px auto;
+         * {
+            display: inline-block;
+         }
+         i {
+            font-size: 34px;
+            margin-right: 6px;
+         }
+
+         p, a { font-size: 22px; }
+
+      }
+   }
+}
