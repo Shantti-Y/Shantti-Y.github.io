@@ -8,13 +8,96 @@
 ***********************************************/
 
 body {
-   width: 1350px;
+   width: 100%;
+   margin: 0 auto;
    * {
        font-family: "Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
    }
+
+   #header {
+      z-index: 1;
+      position: fixed;
+      width: 100%;
+      background-color: #661400;
+   }
+
+   #main {
+      width: 100%;
+
+      div.main-content {
+         padding: 65px 40px;
+         text-align: center;
+
+         h3.content-header {
+            display: block;
+            width: 100%;
+            font-size: 40px;
+            margin-bottom: 65px;
+
+            i { margin-right: 12px; }
+         }
+
+         div.content-elements {
+            width: 100%;
+         }
+      }
+
+      hr {
+         width: 100%;
+         size: 1;
+         color: gray;
+      }
+   }
+
+   #footer {
+      background-color: black;
+      padding: 30px 0 60px 0;
+      text-align: center;
+   }
 }
 
+@media all and (min-width: 768px){
+   body {
+      #main {
+         div.main-content {
+            overflow: hidden;
+            padding: 65px 80px;
+            h3.content-header {
+               float: left;
+               width: 35%;
+               margin-bottom: 0;
+            }
 
+            div.content-elements {
+               float: right;
+               width: 60%;
+            }
+         }
+      }
+   }
+}
+
+@media all and (min-width: 992px) {
+   body {
+      min-width: 992px;
+      #main {
+
+         div.main-content {
+            padding: 65px 60px;
+            margin: 0 auto;
+            min-width: 806px;
+            max-width: 1000px;
+            h3.content-header {
+               width: 250px;
+               font-size: 40px;
+               text-align: left;
+            }
+
+            div.content-elements { width: calc(100% - 250px - 40px); }
+         }
+      }
+   }
+}
 
 /***********************************************
 
@@ -25,25 +108,19 @@ body {
 ***********************************************/
 
 #header {
-   z-index: 1;
-   position: fixed;
-   width: calc(100% - 32px);
-   background-color: green;
-   padding: 0 16px;
    nav {
-      height: 50px;
+      margin: 0 16px;
+      height: 49px;
       overflow: hidden;
 
       div#logos {
          float: left;
-         margin: 13px;
-         font-size: 17px;
+         margin: 16px 0 ;
          color: #ffffff;
 
-         h2#main-logo {}
-         h3#collapsed-logo {
-            display: none;
-         }
+         * { font-size: 17px; }
+         h2#main-logo { display: none;}
+         h3#collapsed-logo { display: block; }
       }
 
       ul#navbars {
@@ -59,28 +136,45 @@ body {
 
             a {
                display: block;
-               height: inherit;
+               height: 49px;
                padding: 0 13px;
                color: #ffffff;
                text-decoration: none;
                * { margin-top: 1rem; }
+               span { display: none; }
 
-               i { margin-right: 7px; }
+               &:hover { opacity: 0.7 }
+            }
 
-               &:hover {
-                  opacity: 0.7
+            &:nth-child(1) { background-color: #24292e; }
+            &:nth-child(2) { background-color: #4267b2; }
+            &:nth-child(3) { background-color: #db4437; }
+         }
+      }
+   }
+}
+
+@media all and (min-width: 576px) {
+   #header {
+      nav {
+         ul#navbars {
+            li {
+               a {
+                  i { margin-right: 6px; }
+                  span { display: inline; }
                }
             }
+         }
+      }
+   }
+}
 
-            &:nth-child(1) {
-               background-color: #24292e;
-            }
-            &:nth-child(2) {
-               background-color: #4267b2;
-            }
-            &:nth-child(3) {
-               background-color: #db4437;
-            }
+@media all and (min-width: 768px) {
+   #header {
+      nav {
+         div#logos {
+            h2#main-logo { display: block;}
+            h3#collapsed-logo { display: none; }
          }
       }
    }
@@ -95,20 +189,29 @@ body {
 ***********************************************/
 
 #footer {
-   background-color: black;
-   padding: 30px 0 60px 0;
-   text-align: center;
+   ul#copyrights {
+      li {
+         margin-top: 8px;
+         font-size: 14px;
+         color: #ffffff;
+      }
+   }
+}
 
-   h5#copyrights {
-      font-size: 15px;
-      color: #ffffff;
+@media all and (min-width: 576px) {
+   #footer {
+      ul#copyrights {
+         li {
+            display: inline;
+         }
+      }
    }
 }
 
 /***********************************************
 
 
-                     Main
+                     Top
 
 
 ***********************************************/
@@ -117,10 +220,10 @@ body {
 
    #top {
       position: relative;
-      width: 100%;
       height: 700px;
       background-image: url("../images/top_background.png");
-      background-size: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
 
       #filter {
          height: 100%;
@@ -128,20 +231,28 @@ body {
 
          div#top-items {
             position: absolute;
-            top: 300px;
-            width: 100%;
+            top: 150px;
+            width: calc(100% - 70px);
             text-align: center;
+            left: 35px;
+            right: 35px;
             * { color: #ffffff; }
             > * { margin-bottom: 18px; }
 
-            h1#title { font-size: 48px; }
-            h2#nickname { font-size: 23px; }
+            h1#title {
+               font-size: 48px;
+               line-height: 130%;
+            }
+            h2#nickname {
+               font-size: 23px;
+               line-height: 130%;
+            }
 
             ul#top-menus {
-               margin-top: 42px;
+               margin: 50px auto;
                li.menu {
                   display: inline-block;
-                  margin: 0 19px;
+                  margin: 30px 10px;
                   a {
                      text-decoration: none;
                      border: 1px solid #ffffff;
@@ -168,152 +279,302 @@ body {
          }
       }
    }
+}
 
-   div.main-content {
-      padding: 65px 120px;
-      overflow: hidden;
-      border-bottom: 1px solid gray;
+@media all and (min-width: 768px) {
+   #main {
+      #top {
+         #filter {
+            div#top-items {
+               margin: 0 auto;
+               top: 270px;
+               left: 0;
+               right: 0;
+            }
+         }
+      }
    }
+}
 
-   h3.content-header {
-      float: left;
-      display: block;
-      width: 250px;
-      font-size: 40px;
-      margin-left: 40px;
-      i { margin-right: 12px; }
+/***********************************************
+
+
+                     Profile
+
+
+***********************************************/
+
+#profile {
+   #profile-content {
+      img {
+         margin: 0 auto 20px auto;
+         border: 5px solid black;
+         border-radius: 8px;
+         width: 160px;
+      }
+
+      #details {
+         width: 100%;
+         text-align: left;
+         #description {
+            p {
+               margin-top: 8px;
+               line-height: 140%;
+            }
+         }
+
+         #career { display: none; }
+      }
    }
+}
 
-   div.content-elements {
-      float: right;
-      width: 640px;
-   }
-
+@media all and(min-width: 992px) {
    #profile {
 
       #profile-content {
          overflow: hidden;
-         img {
-            border: 5px solid black;
-            border-radius: 8px;
-            float: left;
-            width: 200px;
-         }
+         img { float: left; }
 
          #details {
             float: right;
+            width: calc(100% - 180px - 50px);
             #description {
-               width: 400px;
-
                p {
-                  margin-top: 12px;
-                  line-height: 150%;
                }
-            }
-
-            #career {
-               display: none;
             }
          }
       }
-
    }
+}
 
+/***********************************************
+
+
+                     Skills
+
+
+***********************************************/
+
+#skills {
+   .skill-row {
+      .skill-box {
+         width: calc(100% - 50px);
+         display: block;
+         border: 1px solid gray;
+         border-radius: 4px;
+         padding: 20px 24px;
+         margin-bottom: 20px;
+
+         p.header {
+            font-weight: bold;
+            font-size: 19px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid gray;
+         }
+
+         ul {
+            li {
+               width: 100%;
+               text-align: center;
+               display: block;
+               margin-top: 38px;
+               img { height: 60px; }
+               span {
+                  margin-top: 14px;
+                  display: block;
+               }
+            }
+         }
+
+         &:last-child { margin: 0; }
+      }
+   }
+}
+
+@media all and(min-width: 478px) {
    #skills {
       .skill-row {
          .skill-box {
-            box-sizing: content-box;
-            width: 100%;
-            display: inline-block;
-            border: 1px solid gray;
-            border-radius: 4px;
-            padding: 20px 24px;
-            margin-bottom: 20px;
-
-            p.header {
-               font-weight: bold;
-               font-size: 19px;
-               padding-bottom: 9px;
-               border-bottom: 1px solid gray;
-            }
-
             ul {
+               text-align: center;
                li {
-                  text-align: center;
+                  width: auto;
                   display: inline-block;
-                  margin: 25px 26px 0 26px;
-                  img {
-                     height: 69px;
-                  }
-                  span {
-                     margin-top: 18px;
-                     display: block;
-                  }
+                  margin: 27px;
+                  img { height: 69px; }
                }
-            }
-
-            &:last-child {
-               margin: 0;
             }
          }
       }
    }
+}
 
+/***********************************************
+
+
+                     Works
+
+
+***********************************************/
+
+#works {
+   .work-row {
+      .work-box {
+         width: 100%;
+         box-sizing: content-box;
+         display: inline-block;
+         border: 1px solid gray;
+         border-radius: 4px;
+         margin-bottom: 20px;
+
+         div.thumbnail {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            img {
+               max-width: 240px;
+               max-height: 240px;
+            }
+         }
+
+         div.description {
+            width: calc(100% - 50px);
+            padding: 15px 24px 20px 24px;
+
+            h3 {
+               font-weight: bold;
+               font-size: 24px;
+               padding: 3px 0 14px 0;
+               border-bottom: 1px solid gray;
+               margin-bottom: 22px;
+            }
+            p, ul {
+               text-align: left;
+               font-size: 14px;
+            }
+            p {
+               margin-top: 7px;
+               line-height: 160%;
+               font-size: 13px;
+            }
+            ul {
+               margin-top: 19px;
+               li { margin: 10px 0; }
+            }
+         }
+      }
+   }
+}
+
+@media all and (min-width: 650px) {
    #works {
       .work-row {
          .work-box {
-            width: 100%;
-            box-sizing: content-box;
-            display: inline-block;
-            border: 1px solid gray;
-            border-radius: 4px;
-            margin-bottom: 20px;
             overflow: hidden;
 
-            img {
+            div.thumbnail {
                float: left;
-               width: 250px;
+               border-radius: 6px;
+               margin: 24px 0 0 24px;
+               img {
+                  border-radius: 6px;
+                  width: 240px;
+                  height: 240px;
+
+               }
             }
 
             div.description {
                float: right;
-               width: calc(100% - 300px);
-               padding: 15px 24px 15px 12px;
-
-               h3 {
-                  font-weight: bold;
-                  font-size: 24px;
-                  padding-bottom: 9px;
-                  border-bottom: 1px solid gray;
-                  margin-bottom: 22px;
-               }
-               p {
-                  margin-top: 6px;
-                  line-height: 110%;
-                  font-size: 13px;
-               }
-               ul {
-                  * { font-size: 13px; }
-               }
+               width: calc(100% - 320px);
             }
          }
       }
    }
+}
 
-   #contact {
+@media all and (min-width: 768px) {
+   #works {
+      .work-row {
+         .work-box {
 
-      div.contact-info {
-         margin: 12px auto;
-         * {
-            display: inline-block;
+            div.thumbnail {
+               width: 100%;
+               border-radius: 0;
+               margin: 0;
+               img {
+                  border-radius: 0;
+                  max-width: 240px;
+                  max-height: 240px;
+               }
+            }
+
+            div.description {
+               width: calc(100% - 50px);
+            }
          }
-         i {
-            font-size: 34px;
-            margin-right: 6px;
-         }
-
-         p, a { font-size: 22px; }
-
       }
+   }
+}
+
+@media all and (min-width: 992px) {
+   #works {
+      .work-row {
+         .work-box {
+            overflow: hidden;
+
+            div.thumbnail {
+               float: left;
+               border-radius: 6px;
+               margin: 24px 0 0 24px;
+               width: 240px;;
+               img {
+                  border-radius: 6px;
+                  width: 240px;
+                  height: 240px;
+               }
+            }
+
+            div.description {
+               float: right;
+               width: calc(100% - 320px);
+            }
+         }
+      }
+   }
+}
+
+/***********************************************
+
+
+                     Contact
+
+
+***********************************************/
+
+#contact {
+   div.contact-info {
+      margin: 22px auto;
+      * { display: block; }
+      i {
+         font-size: 34px;
+         margin: 0 0 11px 0;
+      }
+      p, a { font-size: 22px; }
+   }
+}
+
+@media all and (min-width: 768px) {
+   #contact {
+      div.contact-info {
+         text-align: left;
+         * { display: inline-block; }
+         i { margin: 0 8px 0 0; }
+      }
+   }
+}
+
+@media all and (min-width: 992px) {
+   #contact {
+      div.contact-info { margin-left: 125px; }
    }
 }
