@@ -19,13 +19,13 @@
    <header id="header">
       <nav>
          <div id="logos">
-            <h2 id="main-logo">Takahiro Yoshioka's portfolio</h2>
-            <h3 id="collapsed-logo">Shantti-Y</h3>
+            <a id="main-logo" href="#">Takahiro Yoshioka's portfolio</a>
+            <a id="collapsed-logo" href="#">Shantti-Y</a>
          </div>
          <ul id="navbars">
             <li class="nav-item"><a href="https://github.com/Shantti-Y" target="_blank"><i class="fa fa-github fa-lg"></i><span>Github</span></a></li>
             <li class="nav-item"><a href="https://www.facebook.com/hammpilot" target="_blank"><i class="fa fa-facebook-official fa-lg"></i><span>Facebook</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fa fa-globe fa-lg"></i><span>English</span></a></li>
+            <li id="change-lang" class="nav-item"><a href="#"><i class="fa fa-globe fa-lg"></i><span id="trans-language"></span></a></li>
          </ul>
       </nav>
    </header>
@@ -35,33 +35,28 @@
          <div id="filter">
             <div id="top-items">
                <h1 id="title">Takahiro Yoshioka (Shantti-Y)</h1>
-               <h2 id="nickname">Amateur Programmer of Ruby & JavaScript</h2>
+               <h2 id="trans-nickname"></h2>
                <ul id="top-menus">
-                  <li class="menu"><a href="#"><i class="fa fa-user fa-2x"></i>Profile</a></li>
-                  <li class="menu"><a href="#"><i class="fa fa-code fa-2x"></i>Skills</a></li>
-                  <li class="menu"><a href="#"><i class="fa fa-laptop fa-2x"></i>Works</a></li>
-                  <li class="menu"><a href="#"><i class="fa fa-envelope-o fa-2x"></i>Contact</a></li>
+                  <li class="menu"><a href="#"><i class="fa fa-user fa-2x"></i><span id="trans-top-profile"></span></a></li>
+                  <li class="menu"><a href="#"><i class="fa fa-code fa-2x"></i><span id="trans-top-skills"></span></a></li>
+                  <li class="menu"><a href="#"><i class="fa fa-laptop fa-2x"></i><span id="trans-top-works"></span></a></li>
+                  <li class="menu"><a href="#"><i class="fa fa-envelope-o fa-2x"></i><span id="trans-top-contact"></span></a></li>
                </ul>
             </div>
          </div>
       </div>
 
       <div id="profile" class="main-content">
-         <h3 class="content-header"><i class="fa fa-user fa-lg"></i>Profile</h3>
+         <h3 class="content-header"><i class="fa fa-user fa-lg"></i><span id="trans-content-profile"></span></h3>
          <div id="profile-content" class="content-elements">
             <img src="./images/profile.png">
             <div id="details">
-               <div id="description">
-                  <p>普段は日曜プログラマとして勉強、アプリ開発をしています。</p>
-                  <p>言語は主にRubyやJavaScriptを使用しています。</p>
-                  <p>現在プログラミング、IT系とは異なる業界で働いておりますが、プログラマになるべく転職活動中です。</p>
-                  <p>よろしくお願いいたします。</p>
+               <div id="trans-description">
                </div>
                <div id="career">
                   <ul>
-                     <li>2016年3月： 東海大学工学部 原子力工学科 卒業</li>
-                     <li>2016年4月： オイレス工業株式会社 入社</li>
-                     <li>～現在：    現職中、転職活動中</li>
+                     <li id="trans-career-1">2016年3月： 東海大学工学部 原子力工学科 卒業</li>
+                     <li id="trans-career-2">2016年4月： オイレス工業株式会社 入社</li>
                   </ul>
                </div>
             </div>
@@ -70,91 +65,43 @@
       <hr>
 
       <div id="skills" class="main-content">
-         <h3 class="content-header"><i class="fa fa-code fa-lg"></i>Skills</h3>
+         <h3 class="content-header"><i class="fa fa-code fa-lg"></i><span id="trans-content-skills"></span></h3>
          <div class="content-elements">
             <div class="skill-row">
                <div class="skill-box">
-                  <p class="header">言語</p>
+                  <p id="trans-program-langs" class="header"></p>
                   <ul>
-                     <li>
-                        <img src="./images/ruby.png">
-                        <span>Ruby</span>
-                     </li>
-                     <li>
-                        <img src="./images/javascript.png">
-                        <span>JavaScript</span>
-                     </li>
-                     <li>
-                        <img src="./images/html.png">
-                        <span>HTML</span>
-                     </li>
-                     <li>
-                        <img src="./images/css.png">
-                        <span>CSS</span>
-                     </li>
+                     <li><img src="./images/ruby.png"><span>Ruby</span></li>
+                     <li><img src="./images/javascript.png"><span>JavaScript</span></li>
+                     <li><img src="./images/html.png"><span>HTML</span></li>
+                     <li><img src="./images/css.png"><span>CSS</span></li>
                   </ul>
                </div>
                <div class="skill-box">
-                  <p class="header">フレームワーク</p>
+                  <p id="trans-frameworks" class="header"></p>
                   <ul>
-                     <li>
-                        <img src="./images/rails.png">
-                        <span>Ruby on Rails</span>
-                     </li>
-                     <li>
-                        <img src="./images/nodejs.png">
-                        <span>Node.js</span>
-                     </li>
-                     <li>
-                        <img src="./images/vuejs.png">
-                        <span>Vue.js</span>
-                     </li>
-                     <li>
-                        <img src="./images/sass.png">
-                        <span>Sass</span>
-                     </li>
-                     <li>
-                        <img src="./images/electron.png">
-                        <span>Electron</span>
-                     </li>
+                     <li><img src="./images/rails.png"><span>Ruby on Rails</span></li>
+                     <li><img src="./images/nodejs.png"><span>Node.js</span></li>
+                     <li><img src="./images/vuejs.png"><span>Vue.js</span></li>
+                     <li><img src="./images/sass.png"><span>Sass</span></li>
+                     <li><img src="./images/electron.png"><span>Electron</span></li>
                   </ul>
                </div>
                <div class="skill-box">
-                  <p class="header">開発環境</p>
+                  <p id="trans-envs" class="header"></p>
                   <ul>
-                     <li>
-                        <img src="./images/centos.png">
-                        <span>CentOS7</span>
-                     </li>
-                     <li>
-                        <img src="./images/apache.png">
-                        <span>Apache</span>
-                     </li>
-                     <li>
-                        <img src="./images/heroku.png">
-                        <span>Heroku</span>
-                     </li>
-                     <li>
-                        <img src="./images/mysql.png">
-                        <span>MySQL</span>
-                     </li>
+                     <li><img src="./images/centos.png"><span>CentOS7</span></li>
+                     <li><img src="./images/apache.png"><span>Apache</span></li>
+                     <li><img src="./images/heroku.png"><span>Heroku</span></li>
+                     <li><img src="./images/mysql.png"><span>MySQL</span></li>
                   </ul>
                </div>
                <div class="skill-box">
-                  <p class="header">ツール群</p>
+                  <p id="trans-tools" class="header"></p>
                   <ul>
-                     <li>
-                        <img src="./images/github.png">
-                        <span>Git(Hithub)</span>
-                     </li>
-                     <li>
-                        <img src="./images/gulp.png">
-                        <span>Gulp</span>
-                     </li>
-                     <li>
-                        <img src="./images/atom.png">
-                        <span>Atom</span>
-                     </li>
+                     <li><img src="./images/github.png"><span>Git(Github)</span></li>
+                     <li><img src="./images/gulp.png"><span>Gulp</span></li>
+                     <li><img src="./images/atom.png"><span>Atom</span></li>
                   </ul>
                </div>
             </div>
@@ -163,7 +110,7 @@
       <hr>
 
       <div id="works" class="main-content">
-         <h3 class="content-header"><i class="fa fa-laptop fa-lg"></i>Works</h3>
+         <h3 class="content-header"><i class="fa fa-laptop fa-lg"></i><span id="trans-content-works"></span></h3>
          <div class="content-elements">
             <div class="work-row">
                <div class="work-box">
@@ -172,18 +119,16 @@
                   </div>
                   <div class="description">
                      <h3>NohSight</h3>
-                     <p>全国の能楽公演を検索できるWebアプリ。自主公演の開催などユーザ自身が公演情報を作成・提供することも可能。</p>
-                     <p>現在α版リリース。随時機能追加予定。</p>
-                     <p>※ソースコードはプライベート下でのプロジェクト管理の為公開不可</p>
+                     <p id="trans-noh-description"></p>
                      <ul class="links">
-                        <li><a href="https://nohsight.herokuapp.com/" target="_blank">公式サイト</a></li>
-                        <li><a href="https://www.facebook.com/groups/499925603710741/" target="_blank">Facebookページ</a></li>
+                        <li><a href="https://nohsight.herokuapp.com/" target="_blank"><span id="trans-noh-link-1"></span></a></li>
+                        <li><a href="https://www.facebook.com/groups/499925603710741/" target="_blank"><span id="trans-noh-link-2"></span></a></li>
                      </ul>
                      <ul class="techs">
-                        <li>言語：Ruby, JavaScript, HTML, CSS</li>
-                        <li>フレームワーク：Ruby on Rails, Vue.js, Sass</li>
-                        <li>開発環境：CentOS7, Heroku, MySQL</li>
-                        <li>ツール群：Git, Atom</li>
+                        <li><span id="trans-noh-langs"></span>：Ruby, JavaScript, HTML, CSS</li>
+                        <li><span id="trans-noh-frameworks"></span>：Ruby on Rails, Vue.js, Sass</li>
+                        <li><span id="trans-noh-envs"></span>：CentOS7, Heroku, MySQL</li>
+                        <li><span id="trans-noh-tools"></span>：Git, Atom</li>
                      </ul>
                   </div>
                </div>
@@ -194,16 +139,15 @@
                   </div>
                   <div class="description">
                      <h3>Otasuke</h3>
-                     <p>滋賀県草津市の天気予報、ゴミ分別カレンダーが確認できるデスクトップアプリ</p>
-                     <p>現在開発中。2017年12月末リリース予定。</p>
+                     <p id="trans-otasuke-description"></p>
                      <ul class="links">
-                        <li><a href="https://github.com/Shantti-Y/otasuke" target="_blank">GitHubリポジトリ</a></li>
+                        <li><a href="https://github.com/Shantti-Y/otasuke" target="_blank"><span id="trans-otasuke-link-1"></span></a></li>
                      </ul>
                      <ul class="techs">
-                        <li>言語：JavaScript, HTML, CSS</li>
-                        <li>フレームワーク：Node.js, Vue.js, Sass, Electron</li>
-                        <li>開発環境：CentOS7, Heroku</li>
-                        <li>ツール群：Git, Gulp, Atom</li>
+                        <li><span id="trans-otasuke-langs"></span>：JavaScript, HTML, CSS</li>
+                        <li><span id="trans-otasuke-frameworks"></span>：Node.js, Vue.js, Sass, Electron</li>
+                        <li><span id="trans-otasuke-envs"></span>：CentOS7, Heroku</li>
+                        <li><span id="trans-otasuke-tools"></span>：Git, Gulp, Atom</li>
                      </ul>
                   </div>
                </div>
@@ -213,7 +157,7 @@
       <hr>
 
       <div id="contact" class="main-content">
-         <h3 class="content-header"><i class="fa fa-envelope-o fa-lg"></i>Contact</h3>
+         <h3 class="content-header"><i class="fa fa-envelope-o fa-lg"></i><span id="trans-content-contact"></span></h3>
          <div class="content-elements">
             <div class="contact-info">
                <i class="fa fa-envelope-o"></i>
@@ -240,5 +184,6 @@
    </footer>
 
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 </html>

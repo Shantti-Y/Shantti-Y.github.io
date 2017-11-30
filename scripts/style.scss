@@ -118,9 +118,13 @@ body {
          margin: 16px 0 ;
          color: #ffffff;
 
-         * { font-size: 17px; }
-         h2#main-logo { display: none;}
-         h3#collapsed-logo { display: block; }
+         a {
+             font-size: 17px;
+             color: #ffffff;
+             text-decoration: none;
+         }
+         a#main-logo { display: none;}
+         a#collapsed-logo { display: block; }
       }
 
       ul#navbars {
@@ -173,8 +177,8 @@ body {
    #header {
       nav {
          div#logos {
-            h2#main-logo { display: block;}
-            h3#collapsed-logo { display: none; }
+            a#main-logo { display: block;}
+            a#collapsed-logo { display: none; }
          }
       }
    }

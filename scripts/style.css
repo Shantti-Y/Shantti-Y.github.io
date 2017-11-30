@@ -78,11 +78,13 @@ body {
     float: left;
     margin: 16px 0;
     color: #ffffff; }
-    #header nav div#logos * {
-      font-size: 17px; }
-    #header nav div#logos h2#main-logo {
+    #header nav div#logos a {
+      font-size: 17px;
+      color: #ffffff;
+      text-decoration: none; }
+    #header nav div#logos a#main-logo {
       display: none; }
-    #header nav div#logos h3#collapsed-logo {
+    #header nav div#logos a#collapsed-logo {
       display: block; }
   #header nav ul#navbars {
     float: right;
@@ -119,9 +121,9 @@ body {
   #header nav ul#navbars li a span {
     display: inline; } }
 @media all and (min-width: 768px) {
-  #header nav div#logos h2#main-logo {
+  #header nav div#logos a#main-logo {
     display: block; }
-  #header nav div#logos h3#collapsed-logo {
+  #header nav div#logos a#collapsed-logo {
     display: none; } }
 /***********************************************
 
