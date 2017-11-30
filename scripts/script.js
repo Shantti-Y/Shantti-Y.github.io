@@ -2,7 +2,7 @@
 // Jump to each content
 function jumpToContent(event, tag){
    event.preventDefault();
-   $('html').animate({
+   $('html, body').animate({
       scrollTop: $('#' + tag).offset().top
    }, 700);
 }
@@ -54,7 +54,7 @@ var transwords = [
    new Transword('program-langs', '使用言語', 'Languages'),
    new Transword('frameworks', 'フレームワーク', 'Frameworks'),
    new Transword('envs', '開発環境', 'Environments'),
-   new Transword('tools', 'ツール群', 'tools'),
+   new Transword('tools', 'ツール群', 'Tools'),
    // Works
    new Transword('noh-description', '全国の能楽公演を検索できるWebアプリ。自主公演の開催などユーザ自身が公演情報を作成・提供することも可能。</br>' +
                                     '現在α版リリース。随時機能追加予定。',
@@ -91,6 +91,7 @@ function translate(){
 
 document.addEventListener('DOMContentLoaded', function(event){
    translate();
+   $('body,html').css('height','auto');
 });
 
 document.getElementById('change-lang').addEventListener('click', function(event){

@@ -6,17 +6,20 @@
 
 ***********************************************/
 body {
-  width: 100%;
   margin: 0 auto; }
   body * {
-    font-family: "Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif; }
+    font-family: Georgia, Verdana, 'Yu Gothic', 'YuGothic', sans-serif;
+    font-weight: 550; }
   body #header {
     z-index: 1;
     position: fixed;
     width: 100%;
-    background-color: #661400; }
+    background-color: #24080a;
+    box-shadow: 0 1px 5px #330000; }
   body #main {
     width: 100%; }
+    body #main * {
+      color: #1f0c0a; }
     body #main div.main-content {
       padding: 65px 40px;
       text-align: center; }
@@ -32,9 +35,9 @@ body {
     body #main hr {
       width: 100%;
       size: 1;
-      color: gray; }
+      color: #b3b3b3; }
   body #footer {
-    background-color: black;
+    background-color: #24080a;
     padding: 30px 0 60px 0;
     text-align: center; }
 
@@ -71,7 +74,7 @@ body {
 
 ***********************************************/
 #header nav {
-  margin: 0 16px;
+  margin: 0 30px;
   height: 49px;
   overflow: hidden; }
   #header nav div#logos {
@@ -79,7 +82,7 @@ body {
     margin: 16px 0;
     color: #ffffff; }
     #header nav div#logos a {
-      font-size: 17px;
+      font-size: 21px;
       color: #ffffff;
       text-decoration: none; }
     #header nav div#logos a#main-logo {
@@ -135,7 +138,7 @@ body {
 #footer ul#copyrights li {
   margin-top: 8px;
   font-size: 14px;
-  color: #ffffff; }
+  color: #999999; }
 
 @media all and (min-width: 576px) {
   #footer ul#copyrights li {
@@ -170,8 +173,8 @@ body {
       #main #top #filter div#top-items h1#title {
         font-size: 48px;
         line-height: 130%; }
-      #main #top #filter div#top-items h2#nickname {
-        font-size: 23px;
+      #main #top #filter div#top-items h2#trans-nickname {
+        font-size: 25px;
         line-height: 130%; }
       #main #top #filter div#top-items ul#top-menus {
         margin: 50px auto; }
@@ -180,7 +183,7 @@ body {
           margin: 30px 10px; }
           #main #top #filter div#top-items ul#top-menus li.menu a {
             text-decoration: none;
-            border: 1px solid #ffffff;
+            border: 1px solid #e6e6e6;
             position: relative;
             display: block;
             width: 90px;
@@ -190,13 +193,19 @@ body {
               display: block;
               width: 40px;
               font-size: 27px;
-              background-color: gray;
+              background-color: #808080;
               padding: 5px 0;
               border-radius: 12px;
               position: absolute;
               top: -19px;
               left: calc(50% - 20px);
               text-align: center; }
+          #main #top #filter div#top-items ul#top-menus li.menu:hover {
+            background-color: #e6e6e6; }
+            #main #top #filter div#top-items ul#top-menus li.menu:hover * {
+              color: #808080; }
+            #main #top #filter div#top-items ul#top-menus li.menu:hover i {
+              background-color: #e6e6e6; }
 
 @media all and (min-width: 768px) {
   #main #top #filter div#top-items {
@@ -213,15 +222,17 @@ body {
 ***********************************************/
 #profile #profile-content img {
   margin: 0 auto 20px auto;
-  border: 5px solid black;
+  border: 3px solid #4f4240;
   border-radius: 8px;
   width: 160px; }
 #profile #profile-content #details {
   width: 100%;
   text-align: left; }
-  #profile #profile-content #details #description p {
+  #profile #profile-content #details * {
+    font-weight: 500; }
+  #profile #profile-content #details #trans-description {
     margin-top: 8px;
-    line-height: 140%; }
+    line-height: 150%; }
   #profile #profile-content #details #career {
     display: none; }
 
@@ -243,15 +254,15 @@ body {
 #skills .skill-row .skill-box {
   width: calc(100% - 50px);
   display: block;
-  border: 1px solid gray;
+  border: 1px solid #b3b3b3;
   border-radius: 4px;
   padding: 20px 24px;
-  margin-bottom: 20px; }
+  margin-bottom: 45px; }
   #skills .skill-row .skill-box p.header {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 21px;
     padding-bottom: 14px;
-    border-bottom: 1px solid gray; }
+    border-bottom: 1px solid #b3b3b3; }
   #skills .skill-row .skill-box ul li {
     width: 100%;
     text-align: center;
@@ -285,12 +296,12 @@ body {
   width: 100%;
   box-sizing: content-box;
   display: inline-block;
-  border: 1px solid gray;
+  border: 1px solid #b3b3b3;
   border-radius: 4px;
-  margin-bottom: 20px; }
+  margin-bottom: 45px; }
   #works .work-row .work-box div.thumbnail {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); }
+    background-color: #cdcdcd; }
     #works .work-row .work-box div.thumbnail img {
       max-width: 240px;
       max-height: 240px; }
@@ -301,19 +312,24 @@ body {
       font-weight: bold;
       font-size: 24px;
       padding: 3px 0 14px 0;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid #b3b3b3;
       margin-bottom: 22px; }
     #works .work-row .work-box div.description p, #works .work-row .work-box div.description ul {
       text-align: left;
-      font-size: 14px; }
+      font-weight: 500; }
     #works .work-row .work-box div.description p {
       margin-top: 7px;
       line-height: 160%;
-      font-size: 13px; }
+      font-size: 15px; }
     #works .work-row .work-box div.description ul {
       margin-top: 19px; }
+      #works .work-row .work-box div.description ul * {
+        font-weight: 500; }
       #works .work-row .work-box div.description ul li {
-        margin: 10px 0; }
+        margin: 10px 0;
+        font-size: 14px; }
+        #works .work-row .work-box div.description ul li span {
+          font-weight: 550; }
 
 @media all and (min-width: 650px) {
   #works .work-row .work-box {
@@ -350,8 +366,8 @@ body {
       width: 240px; }
       #works .work-row .work-box div.thumbnail img {
         border-radius: 6px;
-        width: 240px;
-        height: 240px; }
+        width: 238px;
+        height: 238px; }
     #works .work-row .work-box div.description {
       float: right;
       width: calc(100% - 320px); } }
@@ -363,7 +379,7 @@ body {
 
 ***********************************************/
 #contact div.contact-info {
-  margin: 22px auto; }
+  margin: 30px auto; }
   #contact div.contact-info * {
     display: block; }
   #contact div.contact-info i {
