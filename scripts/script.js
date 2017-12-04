@@ -67,8 +67,9 @@ var transwords = [
    new Transword('noh-link-2', 'Facebookページ', 'Facebook Page'),
    new Transword('noh-langs', '使用言語', 'Languages'),
    new Transword('noh-frameworks', 'フレームワーク', 'Frameworks'),
+   new Transword('noh-sqls', 'データベース', 'Databases'),
    new Transword('noh-envs', '開発環境', 'Environments'),
-   new Transword('noh-tools', 'ツール群', 'Tools'),
+   new Transword('noh-others', 'その他', 'Others'),
 
    new Transword('asagata-description', '滋賀県草津市の天気予報、ゴミ分別カレンダーを確認できるデスクトップアプリ</br>' +
                                         '現在開発中。2017年12月末リリース予定',
@@ -78,7 +79,7 @@ var transwords = [
    new Transword('asagata-langs', '使用言語', 'Languages'),
    new Transword('asagata-frameworks', 'フレームワーク', 'Frameworks'),
    new Transword('asagata-envs', '開発環境', 'Environments'),
-   new Transword('asagata-tools', 'ツール群', 'Tools')
+   new Transword('asagata-others', 'その他', 'Others')
 ];
 // Translate between English and Japanese
 var lang = 'en'
