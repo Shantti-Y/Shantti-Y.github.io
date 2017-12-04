@@ -53,8 +53,9 @@ var transwords = [
    // Skills
    new Transword('program-langs', '使用言語', 'Languages'),
    new Transword('frameworks', 'フレームワーク', 'Frameworks'),
+   new Transword('sqls', 'データベース', 'Databases'),
    new Transword('envs', '開発環境', 'Environments'),
-   new Transword('tools', 'ツール群', 'Tools'),
+   new Transword('others', 'その他', 'Others'),
    // Works
    new Transword('noh-description', '全国の能楽公演を検索できるWebアプリ。自主公演の開催などユーザ自身が公演情報を作成・提供することも可能。</br>' +
                                     '現在α版リリース。随時機能追加予定。',
@@ -69,15 +70,15 @@ var transwords = [
    new Transword('noh-envs', '開発環境', 'Environments'),
    new Transword('noh-tools', 'ツール群', 'Tools'),
 
-   new Transword('otasuke-description', '滋賀県草津市の天気予報、ゴミ分別カレンダーを確認できるデスクトップアプリ</br>' +
+   new Transword('asagata-description', '滋賀県草津市の天気予報、ゴミ分別カレンダーを確認できるデスクトップアプリ</br>' +
                                         '現在開発中。2017年12月末リリース予定',
                                         "The desktop application providing weather report and trash separation calendar for residents in Shiga prefecture.</br>"+
                                         "I'm developing it and will launch in this year."),
-   new Transword('otasuke-link-1', 'Githubリポジトリ', 'Github Repository'),
-   new Transword('otasuke-langs', '使用言語', 'Languages'),
-   new Transword('otasuke-frameworks', 'フレームワーク', 'Frameworks'),
-   new Transword('otasuke-envs', '開発環境', 'Environments'),
-   new Transword('otasuke-tools', 'ツール群', 'Tools')
+   new Transword('asagata-link-1', 'Githubリポジトリ', 'Github Repository'),
+   new Transword('asagata-langs', '使用言語', 'Languages'),
+   new Transword('asagata-frameworks', 'フレームワーク', 'Frameworks'),
+   new Transword('asagata-envs', '開発環境', 'Environments'),
+   new Transword('asagata-tools', 'ツール群', 'Tools')
 ];
 // Translate between English and Japanese
 var lang = 'en'
