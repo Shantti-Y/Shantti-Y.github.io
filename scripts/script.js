@@ -72,9 +72,9 @@ var transwords = [
    new Transword('noh-others', 'その他', 'Others'),
 
    new Transword('asagata-description', '滋賀県草津市の天気予報、ゴミ分別カレンダーを確認できるデスクトップアプリ</br>' +
-                                        '現在開発中。2017年12月末リリース予定',
+                                        '現在開発中。2018年2月リリース予定',
                                         "The desktop application providing weather report and trash separation calendar for residents in Shiga prefecture.</br>"+
-                                        "I'm developing it and will launch in this year."),
+                                        "It will be launched in February 2018"),
    new Transword('asagata-link-1', 'Githubリポジトリ', 'Github Repository'),
    new Transword('asagata-langs', '使用言語', 'Languages'),
    new Transword('asagata-frameworks', 'フレームワーク', 'Frameworks'),
