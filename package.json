@@ -1,0 +1,29 @@
+{
+  "name": "ye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shantti-Y/Shantti-Y.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shantti-Y/Shantti-Y.github.io/issues"
+  },
+  "homepage": "https://github.com/Shantti-Y/Shantti-Y.github.io#readme",
+  "devDependencies": {
+    "@nuxt/typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "nuxt": "^2.8.1",
+    "ts-node": "^8.3.0",
+    "vue-property-decorator": "^8.2.1",
+    "vuex-class": "^0.3.2",
+    "vuex-router-sync": "^5.0.0"
+  }
+}

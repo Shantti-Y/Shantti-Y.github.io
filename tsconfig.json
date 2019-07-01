@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "strict": true,
+    "module": "es2015",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "baseUrl": ".",
+    "locale": "en",
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitReturns": true,
+    "paths": {
+      "~/*": [
+        "./*"
+      ]
+    },
+    "strictNullChecks": true
+  }
+}
