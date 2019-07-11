@@ -12,11 +12,18 @@ const config: NuxtConfiguration = {
       { property: 'og:site_name', content: "Takahiro Yoshioka (Shantti-Y) Portfolio Web Site" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'description', content: metaDescription }
+    ],
+    link: [
+      { rel: 'stylesheet', href: 'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css' }
     ]
   },
-  plugins: [
-    '@/plugins/vuex-router-sync'
-  ]
+  css: [
+    '@/assets/stylesheets/main.css',
+    '@/assets/stylesheets/reset.css',
+    '@/assets/stylesheets/background.css'
+  ],
+  ssr: false
 };
 
 export default config;
