@@ -33,6 +33,7 @@ export const devIconList: { [key: string]: Devicon } = {
   trello: { name: 'trello', fontType: 'plain' },
   docker: { name: 'docker', fontType: 'plain' },
   gradle: { name: 'gradle', fontType: 'plain' },
+  websocket: { name: 'websocket', fontType: 'none' },
 
   intellij: { name: 'intellij', fontType: 'plain' },
   visualstudio: { name: 'visualstudio', fontType: 'plain' },

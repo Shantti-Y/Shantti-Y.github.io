@@ -17,13 +17,17 @@
   },
   "homepage": "https://github.com/Shantti-Y/Shantti-Y.github.io#readme",
   "devDependencies": {
-    "@nuxt/typescript": "^2.8.1"
+    "@nuxt/typescript": "^2.8.1",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "animate.css": "^3.7.2",
+    "dayjs": "^1.8.15",
+    "mailgun-js": "^0.22.0",
     "nuxt": "^2.8.1",
     "ts-node": "^8.3.0",
     "vue-property-decorator": "^8.2.1",
