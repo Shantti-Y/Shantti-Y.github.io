@@ -1,17 +1,25 @@
 <template>
   <work-dialog
     name="Nicocale"
-    role="Front, Back-end Developer"
+    role="Front, Back-end Development, Database Design (Private)"
     :screenShots="screenShots"
-    :numberOfContent="2"
+    websiteSrc=""
+    githubRepoSrc="https://github.com/Shantti-Y/Chalendiary"
   >
     <template v-slot:1>
       <dialog-content-container>
-        <typography variant="h4" text="About" />
+        <typography variant="h4" text="Overview" />
         <typography variant="p" text="Nikocale stands for 'Niko-niko Calendar' which visualizes the mood and morale of members in the team/organization (Wikipedia). This software can make communication among the group smooth." />
       </dialog-content-container>
     </template>
     <template v-slot:2>
+      <dialog-content-container>
+        <typography variant="h4" text="Background" />
+        <typography variant="p" text="When I had been working at M3 Career Co., there was a old version of Nikocale which is operated in Google Spreadsheet. However, I've got motivated to create it as a web application because of many reasons (making it more convinient, implementing new technologies which I don't know). It is created by only me with Websocket, Firebase, and React-redux." />
+
+      </dialog-content-container>
+    </template>
+    <template v-slot:3>
       <dialog-content-container>
         <typography variant="h4" text="Tech Stacks" />
         <dev-tool v-for="(icon, idx) in devIcons" :key="idx" :icon="icon" />

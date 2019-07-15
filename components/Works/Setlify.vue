@@ -1,17 +1,24 @@
 <template>
   <work-dialog
     name="Setlify"
-    role="Front, Back-end Developer"
+    role="Front, Back-end Development (Private)"
     :screenShots="screenShots"
-    :numberOfContent="2"
+    websiteSrc="https://setlify-236901.appspot.com"
+    githubRepoSrc="https://github.com/Shantti-Y/SetList"
   >
     <template v-slot:1>
       <dialog-content-container>
-        <typography variant="h4" text="About" />
+        <typography variant="h4" text="Overview" />
         <typography variant="p" text="Setlify is a instant Spotify playlist creator. What you needs are only three things. Your Spotify account, playlist's duration, and your favorite words." />
       </dialog-content-container>
     </template>
     <template v-slot:2>
+      <dialog-content-container>
+        <typography variant="h4" text="Background" />
+        <typography variant="p" text="This is a personal work. I have done all the things that application needs to learn how web applications are developed and are deployed in public. In this application, I used a modern JavaScript syntax, frameworks, and GCP for deployment." />
+      </dialog-content-container>
+    </template>
+    <template v-slot:3>
       <dialog-content-container>
         <typography variant="h4" text="Tech Stacks" />
         <dev-tool v-for="(icon, idx) in devIcons" :key="idx" :icon="icon" />

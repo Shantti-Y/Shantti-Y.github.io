@@ -1,17 +1,23 @@
 <template>
   <work-dialog
     name="Yakukyari"
-    role="Front, Back-end Developer, and Operator"
+    role="Front, Back-end Development, Operator"
     :screenShots="screenShots"
-    :numberOfContent="2"
+    websiteSrc="https://pcareer.m3.com"
   >
     <template v-slot:1>
       <dialog-content-container>
-        <typography variant="h4" text="About" />
-        <typography variant="p" text="Setlify is a instant Spotify playlist creator. What you needs are only three things. Your Spotify account, playlist's duration, and your favorite words." />
+        <typography variant="h4" text="Overview" />
+        <typography variant="p" text="Yakukyari is one of the largest job finding website for pharmacists in Japan. The biggest feature is it publishes job postings of other recruitment agencies so that it functions as pharmacist's portal website." />
       </dialog-content-container>
     </template>
     <template v-slot:2>
+      <dialog-content-container>
+        <typography variant="h4" text="Overview" />
+        <typography variant="p" text="I have joined M3 Career Co. as a full-stack web developer for two years to renew front design and create new features. During this project, I replaced legacy techs with vue.js to implement new inquiry form which is the core for M3 Career's business and add Web Worker for Page Speed Insight score improvement." />
+      </dialog-content-container>
+    </template>
+    <template v-slot:3>
       <dialog-content-container>
         <typography variant="h4" text="Tech Stacks" />
         <dev-tool v-for="(icon, idx) in devIcons" :key="idx" :icon="icon" />

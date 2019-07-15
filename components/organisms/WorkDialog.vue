@@ -43,9 +43,9 @@
         <slot v-for="idx in numberOfContent" :name="idx" />
       </div>
     </div>
-    <footer class="footer">
-      <website-link href="https://setlify-236901.appspot.com" />
-      <github-repository-link href="https://github.com/Shantti-Y/Chalendiary" />
+    <footer v-if="websiteSrc.length > 0 || githubRepoSrc.length > 0"  class="footer">
+      <website-link v-if="websiteSrc.length > 0" :href="websiteSrc" />
+      <github-repository-link v-if="githubRepoSrc.length > 0" :href="githubRepoSrc" />
     </footer>
   </div>
 </template>
@@ -75,15 +75,20 @@ enum Transition {
 })
 export default class Dialog extends Mixins(ClassName) {
   @Prop({ type: Array, required: true }) readonly screenShots;
-  @Prop({ type: Number, required: true }) readonly numberOfContent;
   @Prop({ type: String, required: true }) readonly name;
   @Prop({ type: String, required: true }) readonly role;
+  @Prop({ type: String, required: false, default: '' }) readonly websiteSrc;
+  @Prop({ type: String, required: false, default: '' }) readonly githubRepoSrc;
   @Getter('workDialog/isOpened') readonly isOpened;
   @Action('workDialog/closeComponent') readonly closeComponent;
 
   currentShotIdx = 0;
   slideDirection = Transition.Inactive;
   active = false;
+
+  get numberOfContent(){
+    return Object.keys(this.$slots).length
+  }
 
   get minShotIdx(){
     return 0;
@@ -165,7 +170,7 @@ export default class Dialog extends Mixins(ClassName) {
 }
 .with-slide-transition {
   transition: .4s;
-  z-index: 1500 !important;
+  z-index: 9000 !important;
 }
 .dialog {
   position: absolute;
@@ -193,7 +198,7 @@ export default class Dialog extends Mixins(ClassName) {
     .close-button {
       position: absolute;
       right: 16px;
-      top: 16px;
+      top: 8px;
     }
   }
 

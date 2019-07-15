@@ -1,14 +1,15 @@
 <template>
   <work-dialog
     name="Portfolio"
-    role="Front Developer"
+    role="Front Development (Private)"
     :screenShots="screenShots"
-    :numberOfContent="2"
+    websiteSrc="https://shantti-y.github.io"
+    githubRepoSrc="https://github.com/Shantti-Y/Shantti-Y.github.io"
   >
     <template v-slot:1>
       <dialog-content-container>
-        <typography variant="h4" text="About" />
-        <typography variant="p" text="Nikocale stands for 'Niko-niko Calendar' which visualizes the mood and morale of members in the team/organization (Wikipedia). This software can make communication among the group smooth." />
+        <typography variant="h4" text="Overview" />
+        <typography variant="p" text="Also, I want you to look at my portfolio site as one of my works. This is used as an experiment for new techs, and new tools." />
       </dialog-content-container>
     </template>
     <template v-slot:2>
