@@ -67,7 +67,7 @@ export default class WorksPage extends Vue {
         devIconList.firebase,
         devIconList.websocket
       ],
-      image: { src: require('@/assets/images/works/nikocale/desktop1.png'), alt: 'nikocale-pic' }
+      image: { src: require('@/assets/images/works/nikocale/desktop1.jpg'), alt: 'nikocale-pic' }
     },
     {
       name: 'Setlify', componentName: 'SetlifyDialog',
@@ -76,7 +76,7 @@ export default class WorksPage extends Vue {
         devIconList.webpack,
         devIconList.spotify
       ],
-      image: { src: require('@/assets/images/works/setlify/desktop1.png'), alt: 'setlify-pic' }
+      image: { src: require('@/assets/images/works/setlify/desktop1.jpg'), alt: 'setlify-pic' }
     },
     {
       name: 'Yakukyari', componentName: 'YakukyariDialog',
@@ -86,7 +86,7 @@ export default class WorksPage extends Vue {
         devIconList.vuejs,
         devIconList.postgresql
       ],
-      image: { src: require('@/assets/images/works/yakukyari/desktop1.png'), alt: 'yakukyari-pic' }
+      image: { src: require('@/assets/images/works/yakukyari/desktop1.jpg'), alt: 'yakukyari-pic' }
     },
     {
       name: 'DealXpert', componentName: 'DealXpertDialog',
@@ -96,7 +96,7 @@ export default class WorksPage extends Vue {
         devIconList.react,
         devIconList.webpack
       ],
-      image: { src: require('@/assets/images/works/dealxpert/desktop1.png'), alt: 'dealxpert-pic' }
+      image: { src: require('@/assets/images/works/dealxpert/desktop1.jpg'), alt: 'dealxpert-pic' }
     },
     {
       name: 'Portfolio', componentName: 'PortfolioDialog',
@@ -105,7 +105,7 @@ export default class WorksPage extends Vue {
         devIconList.nuxt,
         devIconList.typescript
       ],
-      image: { src: require('@/assets/images/works/nikocale/desktop1.png'), alt: 'nikocale-pic' }
+      image: { src: require('@/assets/images/works/portfolio/desktop1.jpg'), alt: 'nikocale-pic' }
     }
   ]
 }

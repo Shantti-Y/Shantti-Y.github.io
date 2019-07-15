@@ -42,10 +42,12 @@ import { devIconList } from '@/utils/devicons';
 })
 export default class Dialog extends Mixins(ClassName) {
   screenShots = [
-    { src: require('@/assets/images/works/yakukyari/desktop1.png'), alt: 'yakukyari-pic-1' },
-    { src: require('@/assets/images/works/yakukyari/desktop2.png'), alt: 'yakukyari-pic-2' },
-    { src: require('@/assets/images/works/yakukyari/mobile1.png'), alt: 'yakukyari-pic-3' },
-    { src: require('@/assets/images/works/yakukyari/mobile2.png'), alt: 'yakukyari-pic-4' },
+    { src: require('@/assets/images/works/yakukyari/desktop1.jpg'), alt: 'yakukyari-pic-1' },
+    { src: require('@/assets/images/works/yakukyari/desktop2.jpg'), alt: 'yakukyari-pic-2' },
+    { src: require('@/assets/images/works/yakukyari/desktop3.jpg'), alt: 'yakukyari-pic-3' },
+    { src: require('@/assets/images/works/yakukyari/mobile1.jpg'), alt: 'yakukyari-pic-4' },
+    { src: require('@/assets/images/works/yakukyari/mobile2.jpg'), alt: 'yakukyari-pic-5' },
+    { src: require('@/assets/images/works/yakukyari/mobile3.jpg'), alt: 'yakukyari-pic-6' },
   ];
 
    devIcons = [

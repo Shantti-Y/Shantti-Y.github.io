@@ -42,14 +42,14 @@ import { devIconList } from '@/utils/devicons';
 })
 export default class Dialog extends Mixins(ClassName) {
   screenShots = [
-    { src: require('@/assets/images/works/nikocale/desktop1.png'), alt: 'nikocale-pic-1' },
-    { src: require('@/assets/images/works/nikocale/desktop2.png'), alt: 'nikocale-pic-2' },
-    { src: require('@/assets/images/works/nikocale/desktop3.png'), alt: 'nikocale-pic-3' },
-    { src: require('@/assets/images/works/nikocale/desktop4.png'), alt: 'nikocale-pic-4' },
-    { src: require('@/assets/images/works/nikocale/mobile1.png'), alt: 'nikocale-pic-5' },
-    { src: require('@/assets/images/works/nikocale/mobile2.png'), alt: 'nikocale-pic-6' },
-    { src: require('@/assets/images/works/nikocale/mobile3.png'), alt: 'nikocale-pic-7' },
-    { src: require('@/assets/images/works/nikocale/mobile4.png'), alt: 'nikocale-pic-8' },
+    { src: require('@/assets/images/works/nikocale/desktop1.jpg'), alt: 'nikocale-pic-1' },
+    { src: require('@/assets/images/works/nikocale/desktop2.jpg'), alt: 'nikocale-pic-2' },
+    { src: require('@/assets/images/works/nikocale/desktop3.jpg'), alt: 'nikocale-pic-3' },
+    { src: require('@/assets/images/works/nikocale/desktop4.jpg'), alt: 'nikocale-pic-4' },
+    { src: require('@/assets/images/works/nikocale/mobile1.jpg'), alt: 'nikocale-pic-5' },
+    { src: require('@/assets/images/works/nikocale/mobile2.jpg'), alt: 'nikocale-pic-6' },
+    { src: require('@/assets/images/works/nikocale/mobile3.jpg'), alt: 'nikocale-pic-7' },
+    { src: require('@/assets/images/works/nikocale/mobile4.jpg'), alt: 'nikocale-pic-8' },
   ];
 
    devIcons = [

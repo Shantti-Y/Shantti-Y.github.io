@@ -42,10 +42,9 @@ import { devIconList } from '@/utils/devicons';
 })
 export default class Dialog extends Mixins(ClassName) {
   screenShots = [
-    { src: require('@/assets/images/works/dealxpert/desktop1.png'), alt: 'dealxpert-pic-1' },
-    { src: require('@/assets/images/works/dealxpert/desktop2.png'), alt: 'dealxpert-pic-2' },
-    { src: require('@/assets/images/works/dealxpert/mobile1.png'), alt: 'dealxpert-pic-3' },
-    { src: require('@/assets/images/works/dealxpert/mobile2.png'), alt: 'dealxpert-pic-4' },
+    { src: require('@/assets/images/works/dealxpert/desktop1.jpg'), alt: 'dealxpert-pic-1' },
+    { src: require('@/assets/images/works/dealxpert/desktop2.jpg'), alt: 'dealxpert-pic-2' },
+    { src: require('@/assets/images/works/dealxpert/desktop3.jpg'), alt: 'dealxpert-pic-3' },
   ];
 
    devIcons = [

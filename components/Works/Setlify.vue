@@ -42,14 +42,12 @@ import { devIconList } from '@/utils/devicons';
 })
 export default class Dialog extends Mixins(ClassName) {
   screenShots = [
-    { src: require('@/assets/images/works/setlify/desktop1.png'), alt: 'setlify-pic-1' },
-    { src: require('@/assets/images/works/setlify/desktop2.png'), alt: 'setlify-pic-2' },
-    { src: require('@/assets/images/works/setlify/desktop3.png'), alt: 'setlify-pic-3' },
-    { src: require('@/assets/images/works/setlify/desktop4.png'), alt: 'setlify-pic-4' },
-    { src: require('@/assets/images/works/setlify/mobile1.png'), alt: 'setlify-pic-5' },
-    { src: require('@/assets/images/works/setlify/mobile2.png'), alt: 'setlify-pic-6' },
-    { src: require('@/assets/images/works/setlify/mobile3.png'), alt: 'setlify-pic-7' },
-    { src: require('@/assets/images/works/setlify/mobile4.png'), alt: 'setlify-pic-8' },
+    { src: require('@/assets/images/works/setlify/desktop1.jpg'), alt: 'setlify-pic-1' },
+    { src: require('@/assets/images/works/setlify/desktop2.jpg'), alt: 'setlify-pic-2' },
+    { src: require('@/assets/images/works/setlify/desktop3.jpg'), alt: 'setlify-pic-3' },
+    { src: require('@/assets/images/works/setlify/mobile1.jpg'), alt: 'setlify-pic-4' },
+    { src: require('@/assets/images/works/setlify/mobile2.jpg'), alt: 'setlify-pic-5' },
+    { src: require('@/assets/images/works/setlify/mobile3.jpg'), alt: 'setlify-pic-6' },
   ];
 
    devIcons = [
