@@ -3,7 +3,7 @@
     name="Nicocale"
     role="Front, Back-end Development, Database Design (Private)"
     :screenShots="screenShots"
-    websiteSrc="https:/nikocale.com"
+    websiteSrc="https://nikocale.com"
     githubRepoSrc="https://github.com/Shantti-Y/Chalendiary"
   >
     <template v-slot:1>
