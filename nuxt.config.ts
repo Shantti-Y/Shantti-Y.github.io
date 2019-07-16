@@ -3,6 +3,7 @@ import NuxtConfiguration from '@nuxt/config';
 const metaDescription = "Takahiro Yoshioka (Shantti-Y), a back-end & front-end software developer who is eager to think about better UI, animations for creating applications with great UX. If you get curious about me, please check out my Portfolio and Github Repositories";
 
 const config: NuxtConfiguration = {
+  mode: 'universal',
   head: {
     titleTemplate: "%s | Takahiro Yoshioka (Shantti-Y) Portfolio Web Site",
     meta: [
@@ -29,7 +30,7 @@ const config: NuxtConfiguration = {
       indentedSyntax: true
     }
   },
-  ssr: false
+  
 };
 
 export default config;

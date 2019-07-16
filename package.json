@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "generate": "nuxt generate"
   },
   "repository": {
     "type": "git",
@@ -17,15 +18,16 @@
   },
   "homepage": "https://github.com/Shantti-Y/Shantti-Y.github.io#readme",
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
     "@nuxt/typescript": "^2.8.1",
+    "babel-polyfill": "^6.26.0",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "animate.css": "^3.7.2",
+    "@babel/runtime": "^7.5.4",
     "dayjs": "^1.8.15",
     "mailgun-js": "^0.22.0",
     "nuxt": "^2.8.1",
