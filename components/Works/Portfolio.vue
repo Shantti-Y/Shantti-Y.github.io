@@ -3,7 +3,7 @@
     name="Portfolio"
     role="Front Development (Private)"
     :screenShots="screenShots"
-    websiteSrc="https://shantti-y.github.io"
+    websiteSrc="https://friendly-keller-883efa.netlify.com"
     githubRepoSrc="https://github.com/Shantti-Y/Shantti-Y.github.io"
   >
     <template v-slot:1>
