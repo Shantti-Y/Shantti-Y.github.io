@@ -14,7 +14,6 @@
           @click="() => changeCurrentComponentName(work.componentName)"
         />
       </div>
-      <navigation-link className="navigation-link" to="/contact" text="Contact Me" />
     </page-container>
   </div>
 </template>

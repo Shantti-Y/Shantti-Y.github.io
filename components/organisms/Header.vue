@@ -15,11 +15,6 @@
           name="Works"
           icon="md-code-working"
         />
-        <nav-button
-          to="/contact"
-          name="Contact"
-          icon="md-mail"
-        />
       </div>
     </div>
   </div>
