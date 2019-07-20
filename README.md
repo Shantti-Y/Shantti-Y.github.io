@@ -12,7 +12,7 @@ Here is the website 👉 https://friendly-keller-883efa.netlify.com
 - CSS3
 - [SASS](https://sass-lang.com/)
   - Actually I use SCSS
-- JavaScript
+- [JavaScript](https://www.javascript.com/)
   - Using ES6 syntax
 - [TypeScript](https://www.typescriptlang.org/index.html)
 - [Babel](https://babeljs.io/)
@@ -31,6 +31,8 @@ Here is the website 👉 https://friendly-keller-883efa.netlify.com
 
 ### 1. Design
 
+Follow the royal road to design a website.
+
 #### Wireframe
 
 I would like to use a pen and a paper to write wireframes, because it can make prototypes in insanely fast speed.
@@ -40,6 +42,8 @@ I would like to use a pen and a paper to write wireframes, because it can make p
 Used Adobe XD because it's free to use personally.
 
 ### 2. Development
+
+Mainly use JavaScript and its popular frameworks.
 
 #### Nuxt.js
 
