@@ -4,3 +4,5 @@ node_modules
 .nuxt
 dist
 settings.json
+.env
+storybook/node_modules
