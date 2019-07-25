@@ -5,4 +5,6 @@ node_modules
 dist
 settings.json
 .env
+yarn-error.log
 storybook/node_modules
+storybook/yarn-error.log

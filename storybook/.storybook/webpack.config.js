@@ -1,6 +1,6 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const path = require('path');
-const entryDir = '../';
+const entryDir = '../../';
 
 module.exports = ({ config }) => {
 
