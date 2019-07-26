@@ -1,26 +1,34 @@
 <template>
-  <i :class="[...classNames, fontName]" class="ion-icon icon" :style="sizeStyle" />
+  <i
+    class="ion-icon icon"
+    :class="[classNames, iconName]"
+    :style="fontSize"
+  />
 </template>
-
 <script lang="ts">
+import Vue from 'vue';
 import { Component, Prop, Mixins } from 'vue-property-decorator';
+
 import ClassName from '@/components/atoms/ClassName';
 
 @Component
 export default class IonIcon extends Mixins(ClassName) {
-  @Prop({ type: String, required: true }) readonly icon;
-  @Prop({ type: Number, required: false, default: 16 }) readonly fontSize;
+  @Prop({ type: String, required: true }) readonly name;
+  @Prop({ type: Number, required: false, default: 18 }) readonly size;
 
-  get fontName(){
-    return `ion-${this.icon}`;
+  get iconName(): string {
+    return `ion-${this.name}`;
   }
 
-  get sizeStyle(){
+  get fontSize(): object {
     return {
-      'font-size': `${this.fontSize}px`
-    }
+      fontSize: `${this.size}px`
+    };
   }
 }
 </script>
-<style scoped>
+<style lang="scss">
+.ion-icon {
+  font-size: 24px;
+}
 </style>
