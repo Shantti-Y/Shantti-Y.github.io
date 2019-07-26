@@ -17,22 +17,17 @@ module.exports = ({ config }) => {
   });
 
   config.module.rules.push({
-    test: /\.vue$/,
-    exclude: /node_modules/,
-    loader: 'vue-loader'
-  });
-
-  config.module.rules.push({
     test: /\.scss$/,
     loaders: ["style-loader", "css-loader", "sass-loader"]
   });
 
   config.resolve.alias = {
     '@/components': path.resolve(__dirname, `${entryDir}/components`),
+    '@/assets': path.resolve(__dirname, `${entryDir}/assets`),
     'vue$': 'vue/dist/vue.esm.js'
   }
 
-  config.plugins.push(new ForkTsCheckerWebpackPlugin())
+  config.plugins.push(new ForkTsCheckerWebpackPlugin());
 
   return config;
 };
