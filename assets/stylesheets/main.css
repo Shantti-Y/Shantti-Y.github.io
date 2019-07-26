@@ -1,7 +1,6 @@
 html,
-body {
-}
+body {}
 
 * {
-  font-family: 'Signika', sans-serif;
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
 }
