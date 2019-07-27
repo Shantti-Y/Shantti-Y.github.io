@@ -1,4 +1,5 @@
 import { configure } from '@storybook/vue';
+import '@/assets/stylesheets/reset.css';
 import '@/assets/stylesheets/main.css';
 
 // automatically import all files ending in *.stories.js
