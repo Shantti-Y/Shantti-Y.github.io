@@ -10,4 +10,11 @@ storiesOf('atoms/FormLabel', module)
     },
     template: '<form-label :field="field" />'
   }))
+  .add('error', () => ({
+    components: { FormLabel },
+    data() {
+      return { field: 'Your Name' }
+    },
+    template: '<form-label :field="field" className="error" />'
+  }))
 ;

@@ -1,7 +1,7 @@
 <template>
-  <div class="textarea-field" :class="classNames">
+  <div class="text-field" :class="classNames">
     <form-label :className="`form-label ${errorClassName}`" :field="field" />
-    <textarea-input :className="`textarea-input ${errorClassName}`" :field="field" v-model="modelValue" />
+    <text-input :className="`textarea-input ${errorClassName}`" :field="field" v-model="modelValue" />
   </div>
 </template>
 <script lang="ts">
@@ -9,12 +9,12 @@ import { Component, Mixins, Prop, PropSync } from 'vue-property-decorator';
 
 import ClassName from '@/components/atoms/ClassName';
 import FormLabel from '@/components/atoms/FormLabel.vue';
-import TextareaInput from '@/components/atoms/TextareaInput.vue';
+import TextInput from '@/components/atoms/TextInput.vue';
 
 @Component({
   components: {
     FormLabel,
-    TextareaInput
+    TextInput
   }
 })
 export default class TextareaField extends Mixins(ClassName) {
@@ -28,7 +28,7 @@ export default class TextareaField extends Mixins(ClassName) {
 }
 </script>
 <style lang="scss" scoped>
-  .textarea-field {
+  .text-field {
     position: relative;
 
     .form-label {
@@ -36,7 +36,7 @@ export default class TextareaField extends Mixins(ClassName) {
       top: -9px;
     }
 
-    .textarea-input {
+    .text-input {
 
     }
   }

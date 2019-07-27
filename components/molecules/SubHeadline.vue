@@ -1,6 +1,6 @@
 <template>
-  <div class="headline" :class="classNames">
-    <typography class="typography" variant="h1" :text="text" />
+  <div class="sub-headline" :class="classNames">
+    <typography class="typography" variant="h2" :text="text" />
   </div>
 </template>
 <script lang="ts">
@@ -14,14 +14,15 @@ import Typography from '@/components/atoms/Typography.vue';
     Typography
   }
 })
-export default class Headline extends Mixins(ClassName) {
+export default class SubHeadline extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
 }
 </script>
 <style lang="scss" scoped>
-  .headline {
+  .sub-headline {
     .typography {
       color: #Ea00d9;
+      font-style: italic;
     }
   }
 </style>
