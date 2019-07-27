@@ -27,10 +27,10 @@ export default class TextInput extends Mixins(ClassName) {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .text-input {
     height: 45px;
-    background-color: #020028;
+    background-color: rgba(2, 0, 40, 0.85);
     border-top: none;
     border-right: none;
     border-left: none;
@@ -40,7 +40,7 @@ export default class TextInput extends Mixins(ClassName) {
     box-sizing: border-box;
   }
   .error {
-    background-color: #340707;
+    background-color: rgba(52, 7, 7, 0.85);
     border-bottom: 2px solid #d40e0d;
   }
   @media all and (max-width: 599px) {

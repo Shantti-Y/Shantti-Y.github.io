@@ -12,7 +12,7 @@ export default class WorkImage extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly alt;
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .work-image {
     width: 100%;
     height: 100%;

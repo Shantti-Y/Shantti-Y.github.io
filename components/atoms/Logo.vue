@@ -10,7 +10,7 @@ import ClassName from '@/components/atoms/ClassName';
 export default class Logo extends Mixins(ClassName) {
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .logo {
     background-color: #ffffff;
   }

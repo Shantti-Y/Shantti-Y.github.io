@@ -27,7 +27,7 @@ export default class IonIcon extends Mixins(ClassName) {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .ion-icon {
   font-size: 24px;
 }

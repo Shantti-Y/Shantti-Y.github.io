@@ -15,10 +15,13 @@ export default class FormLabel extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly field;
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .form-label {
     font-size: 17px;
     font-weight: bold;
     color: #00FF9F;
+  }
+  .error {
+    color: #d40e0d;
   }
 </style>

@@ -12,7 +12,7 @@ export default class Typography extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   h1 { font-size: 40px; }
   h2 { font-size: 34px; }
   h3 { font-size: 28px; }
@@ -25,5 +25,8 @@ export default class Typography extends Mixins(ClassName) {
   p {
     font-size: 14px;
     line-height: 160%;
+  }
+  span {
+    font-size: 14px;
   }
 </style>

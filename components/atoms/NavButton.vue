@@ -15,7 +15,7 @@ export default class NavButton extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .nav-button {
   font-size: 24px;
   font-weight: bold;

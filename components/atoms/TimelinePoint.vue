@@ -10,7 +10,7 @@ import ClassName from '@/components/atoms/ClassName';
 export default class TimelinePoint extends Mixins(ClassName) {
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .timeline-point {
     width: 14px;
     height: 14px;
