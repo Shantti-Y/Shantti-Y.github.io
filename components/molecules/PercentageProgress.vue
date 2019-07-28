@@ -40,7 +40,7 @@ export default class PercentageProgress extends Mixins(ClassName) {
 
     .header {
       padding: 0 5px; 
-      margin-bottom: 2px;
+      margin-bottom: 12px;
       overflow: hidden;
       * {
         color: rgba(246, 236, 94, 1);
@@ -60,7 +60,7 @@ export default class PercentageProgress extends Mixins(ClassName) {
     .linear-gauge {
       position: relative;
       width: 100%;
-      height: 26px;
+      height: 14px;
       background-color: rgba(3, 174, 243, 0.25);
       overflow: hidden;
 

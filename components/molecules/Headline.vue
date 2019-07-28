@@ -20,7 +20,7 @@ export default class Headline extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .headline {
-    margin-bottom: 45px;
+    margin-bottom: 55px;
     .typography {
       color: #Ea00d9;
     }

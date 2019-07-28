@@ -75,15 +75,15 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
 <style lang="scss" scoped>
   .desktop-nav-menu {
     position: fixed;
-    width: 168px;
+    width: 150px;
     min-height: 100vh;
     background: rgba(2, 0, 40, 1);
-    padding: 36px 0;
+    padding: 24px 0;
 
     .logo {
-      width: 90px;
-      height: 90px;
-      margin: 0 39px;
+      width: 65px;
+      height: 65px;
+      margin: 0 auto;
     }
 
     .nav-buttons {
@@ -91,7 +91,7 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
     }
 
     .social-icons {
-      margin-top: 24px;
+      margin-top: 20px;
       text-align: center;
 
       .social-icon {
@@ -101,7 +101,8 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
     }
 
     .copyright {
-      margin-top: 36px;
+      position: fixed;
+      bottom: 24px;
       padding: 0 20px;
     }
   }

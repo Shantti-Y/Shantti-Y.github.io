@@ -14,17 +14,4 @@ export default class Logo extends Mixins(ClassName) {
   .logo {
     background-color: #ffffff;
   }
-  @media all and (max-width: 599px){
-    .logo {
-      width: 90px;
-      height: 90px;
-    }
-  }
-
-  @media all and (min-width: 600px){
-    .logo {
-      width: 55px;
-      height: 55px;
-    }
-  }
 </style>

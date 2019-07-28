@@ -1,7 +1,7 @@
 <template>
   <div class="copyright" :class="classNames">
-    <typography class="typography name" variant="h5" text="Takahiro Yoshioka" />
-    <typography class="typography" variant="h5" :text="issueYears" />
+    <typography class="typography name" variant="h6" text="Takahiro Yoshioka" />
+    <typography class="typography" variant="h6" :text="issueYears" />
   </div>
 </template>
 <script lang="ts">
@@ -36,7 +36,7 @@ export default class Headline extends Mixins(ClassName) {
     }
 
     .name {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
   }
 </style>

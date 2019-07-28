@@ -25,7 +25,7 @@ export default class DefaultLayout extends Vue {
 
   get backgroundStyle(): object {
     return {
-      backgroundImage: `linear-gradient(rgba(2, 0, 40, 0.85), rgba(2, 0, 40, 0.85)), url(${this.currentImage})`
+      backgroundImage: `linear-gradient(rgba(2, 0, 40, 0.87), rgba(2, 0, 40, 0.87)), url(${this.currentImage})`
     };
   }
 }
@@ -34,6 +34,7 @@ export default class DefaultLayout extends Vue {
 #default {
   min-height: 100vh;
   width: 100vw;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -55,9 +56,9 @@ export default class DefaultLayout extends Vue {
 @media all and (min-width: 960px) {
   #default {
     #page-contents {
-      width: calc(100% - (208px * 2));
-      margin: 0 208px;
-      padding: 170px 0;
+      width: calc(100% - (208px + 58px));
+      margin: 0 58px 0 208px;
+      padding: 90px 0;
     }
   }
 }

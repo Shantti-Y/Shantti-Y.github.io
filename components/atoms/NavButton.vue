@@ -17,14 +17,14 @@ export default class NavButton extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
 .nav-button {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #00ff9f;
   justify-content: center;
   display: flex;
   align-items: center;
-  width: 168px;
-  height: 60px;
+  width: 150px;
+  height: 48px;
   background-color: #020028;
   text-decoration: none;
 

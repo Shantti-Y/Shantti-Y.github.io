@@ -13,7 +13,7 @@ export default class Typography extends Mixins(ClassName) {
 }
 </script>
 <style lang="scss" scoped>
-  h1 { font-size: 40px; }
+  h1 { font-size: 54px; }
   h2 { font-size: 34px; }
   h3 { font-size: 28px; }
   h4 { font-size: 22px; }
