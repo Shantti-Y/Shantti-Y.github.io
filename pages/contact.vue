@@ -1,5 +1,7 @@
 <template>
   <div id="contact">
+    <headline text="Contact" />
+    <contact-form />
   </div>
 </template>
 
@@ -7,7 +9,8 @@
 import { Component, Emit, Vue, Watch } from 'vue-property-decorator';
 import { Action } from 'vuex-class';
 
-import Typography from '@/components/atoms/Typography.vue';
+import Headline from '@/components/molecules/Headline.vue';
+import ContactForm from '@/components/organisms/ContactForm.vue';
 
 @Component({
   head(){
@@ -16,7 +19,8 @@ import Typography from '@/components/atoms/Typography.vue';
     }
   },
   components: {
-    Typography
+    Headline,
+    ContactForm
   }
 })
 export default class ContactPage extends Vue {
@@ -31,7 +35,15 @@ export default class ContactPage extends Vue {
   }
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 #contact {
+}
+
+@media all and (min-width: 960px) {
+  #contact {
+    .contact-form {
+      text-align: center;
+    }
+  }
 }
 </style>

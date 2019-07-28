@@ -1,7 +1,9 @@
 <template>
   <div id="default" :style="backgroundStyle">
     <desktop-nav-menu />
-    <nuxt id="page-contents" ref="page" />
+    <div id="page-contents">
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -45,6 +47,7 @@ export default class DefaultLayout extends Vue {
   #default {
     #page-contents {
       margin : 0 32px;
+      padding: 130px 0;
     }
   }
 }
@@ -54,6 +57,7 @@ export default class DefaultLayout extends Vue {
     #page-contents {
       width: calc(100% - (208px * 2));
       margin: 0 208px;
+      padding: 170px 0;
     }
   }
 }
