@@ -1,6 +1,6 @@
 <template>
   <div class="toned-image" :class="classNames">
-    <div class="work-image-container">
+    <div class="work-image-container" :style="imageHeightStyle">
       <work-image className="work-image" :src="imgSrc" :alt="name" />
     </div>
     <div class="work-header">
@@ -10,7 +10,7 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Mixins, Prop } from 'vue-property-decorator';
+import { Component, Mixins, Prop, Emit } from 'vue-property-decorator';
 
 import ClassName from '@/components/atoms/ClassName';
 import WorkImage from '@/components/atoms/WorkImage.vue';
@@ -26,11 +26,37 @@ export default class TonedImage extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly imgSrc;
   @Prop({ type: String, required: true}) readonly name;
   @Prop({ type: String, required: true}) readonly role;
+
+  elementWidth = 410;
+
+  get imageHeightStyle (): object {
+    return {
+      height: `${this.elementWidth * 0.66}px`
+    };
+  }
+
+  @Emit()
+  handleWindowResize(){
+    this.elementWidth = this.$el ? this.$el.clientWidth: this.elementWidth;
+  }
+
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.handleWindowResize();
+    });
+    this.handleWindowResize();
+  }
+
+  beforeDestroy() {
+    window.removeEventListener('resize', () => { 
+      this.handleWindowResize();
+    });
+  }
 }
 </script>
 <style lang="scss" scoped>
   .toned-image {
-    
+    vertical-align: top;
 
     .work-image-container {
       background-color: rgba(2, 0, 40, 1);
@@ -63,6 +89,7 @@ export default class TonedImage extends Mixins(ClassName) {
   @media all and (max-width: 599px) {
     .toned-image {
       width: 100%;
+      display: block;
 
       .work-image-container {
         width: 100%;
@@ -76,7 +103,7 @@ export default class TonedImage extends Mixins(ClassName) {
   }
   @media all and (min-width: 600px) {
     .toned-image {
-      width: 410px;
+      display: inline-block;
 
       .work-image-container {
         width: 100%;

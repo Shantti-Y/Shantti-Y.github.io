@@ -1,8 +1,8 @@
 <template>
   <div class="skill-set" :class="classNames">
     <div class="skill-header" :style="colorStyle">
-      <ion-icon className="header-text" :name="categoryIcon" :size="48" />
-      <typography className="typography header-text" variant="h3" :text="categoryName" />
+      <ion-icon className="header-text" :name="category.icon" :size="48" />
+      <typography className="typography header-text" variant="h3" :text="category.name" />
     </div>
     <percentage-progress
       v-for="(skill, idx) in skills"
@@ -30,14 +30,12 @@ import Typography from '@/components/atoms/Typography.vue';
   }
 })
 export default class SkillSet extends Mixins(ClassName) {
-  @Prop({ type: String, required: true }) readonly categoryName;
-  @Prop({ type: String, required: true }) readonly categoryIcon;
+  @Prop({ type: Object, required: true }) readonly category;
   @Prop({ type: Array, required: true }) readonly skills;
-  @Prop({ type: String, required: true }) readonly color;
 
   get colorStyle(): object {
     return {
-      color: this.color
+      color: this.category.color
     };
   }
 }
@@ -63,15 +61,16 @@ export default class SkillSet extends Mixins(ClassName) {
     }
   }
 
-  @media all and (max-width: 599px) {
+  @media all and (max-width: 959px) {
     .skill-set {
-      width: 100%;
+      display: block;
     }
   }
 
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 960px) {
     .skill-set {
-      width: 400px;
+      display: inline-block;
+      vertical-align: top;
     }
   }
 </style>

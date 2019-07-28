@@ -1,6 +1,6 @@
 <template>
-  <div class="headline" :class="classNames">
-    <typography class="typography" variant="h1" :text="text" />
+  <div class="paragraph" :class="classNames">
+    <typography class="typography" variant="p" :text="text" />
   </div>
 </template>
 <script lang="ts">
@@ -14,15 +14,14 @@ import Typography from '@/components/atoms/Typography.vue';
     Typography
   }
 })
-export default class Headline extends Mixins(ClassName) {
+export default class Paragraph extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
 }
 </script>
 <style lang="scss" scoped>
-  .headline {
-    margin-bottom: 45px;
+  .paragraph {
     .typography {
-      color: #Ea00d9;
+      color: rgba(143, 143, 143, 1);
     }
   }
 </style>

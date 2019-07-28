@@ -32,6 +32,10 @@ export default class ExternalLink extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .external-link {
+    * {
+      display: inline-block;
+    }
+
     .ion-icon {
     }
 
@@ -39,6 +43,19 @@ export default class ExternalLink extends Mixins(ClassName) {
       margin-left: 6px;
       font-size: 19px;
       font-weight: bold;
+    }
+  }
+
+  @media all and (max-width: 959px) {
+    .external-link {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: 960px) {
+    .external-link {
+      display: inline-block;
+      margin-right: 30px;
     }
   }
 </style>

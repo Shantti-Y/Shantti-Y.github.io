@@ -45,13 +45,14 @@ export default class Timeline extends Mixins(ClassName) {
   .timeline {
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 
     &:after {
       content: '';
       position: absolute;
       width: 2px;
-      background-color: rgba(9, 24, 51, 1);
+      background-color: rgba(19, 62, 124, 1);
       top: 0;
       bottom: 0;
       margin-left: -3px;
@@ -65,7 +66,6 @@ export default class Timeline extends Mixins(ClassName) {
       .timeline-event {
         width: 235px;
         padding: 0;
-        background-color: white;
         position: relative;
         border-radius: 6px;
 
@@ -92,6 +92,7 @@ export default class Timeline extends Mixins(ClassName) {
         border-radius: 14px;
         position: absolute;
         left: -9px;
+        z-index: 2;
       }
       
       .timeline-event {

@@ -1,7 +1,7 @@
 <template>
-  <a class="nav-button" :class="classNames" :to="to">
+  <nuxt-link class="nav-button" :class="classNames" :to="to">
     {{ text }}
-  </a>
+  </nuxt-link>
 </template>
 <script lang="ts">
 import Vue from 'vue';
@@ -26,6 +26,7 @@ export default class NavButton extends Mixins(ClassName) {
   width: 168px;
   height: 60px;
   background-color: #020028;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;

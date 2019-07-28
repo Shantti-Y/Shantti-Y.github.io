@@ -1,5 +1,5 @@
 <template>
-  <a class="text-link" :class="classNames" :href="path" :target="target">{{ text }} -></a>
+  <nuxt-link class="text-link" :class="classNames" :to="path" :target="target">{{ text }} -></nuxt-link>
 </template>
 <script lang="ts">
 import { Component, Mixins, Prop } from 'vue-property-decorator';
@@ -21,5 +21,19 @@ export default class TextLink extends Mixins(ClassName) {
   .text-link {
     color: #00ff9f;
     text-decoration: none;
+    font-size: 20px;
+  }
+
+  @media all and (max-width: 959px) {
+    .text-link {
+      display: block;
+      margin-bottom: 36px;
+    }
+  }
+
+  @media all and (min-width: 960px) {
+    .text-link {
+      margin-right: 50px;
+    }
   }
 </style>

@@ -126,7 +126,7 @@ export default class Carousel extends Mixins(ClassName) {
   }
 
   beforeDestroy() {
-  window.removeEventListener('resize', () => { 
+    window.removeEventListener('resize', () => { 
       this.handleWindowResize();
     });
   }

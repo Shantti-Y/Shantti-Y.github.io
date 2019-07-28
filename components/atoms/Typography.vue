@@ -23,7 +23,7 @@ export default class Typography extends Mixins(ClassName) {
     line-height: 140%;
   }
   p {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 160%;
   }
   span {

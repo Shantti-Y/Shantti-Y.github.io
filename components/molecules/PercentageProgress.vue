@@ -62,6 +62,7 @@ export default class PercentageProgress extends Mixins(ClassName) {
       width: 100%;
       height: 26px;
       background-color: rgba(3, 174, 243, 0.25);
+      overflow: hidden;
 
       .determine-buffer {
         position: absolute;  

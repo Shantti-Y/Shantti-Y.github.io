@@ -74,8 +74,9 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .desktop-nav-menu {
+    position: fixed;
     width: 168px;
-    max-height: 800px;
+    min-height: 100vh;
     background: rgba(2, 0, 40, 1);
     padding: 36px 0;
 
@@ -105,13 +106,13 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
     }
   }
 
-  @media all and (max-width: 599px) {
+  @media all and (max-width: 959px) {
     .desktop-nav-menu {
       display: none;
     }
   }
 
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 960px) {
     .desktop-nav-menu {
       display: block;
     }
