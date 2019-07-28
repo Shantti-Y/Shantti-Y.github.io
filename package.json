@@ -1,5 +1,5 @@
 {
-  "name": "ye",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,12 +23,8 @@
     "@babel/preset-env": "^7.5.4",
     "@nuxt/typescript": "^2.8.1",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-vue": "^2.0.2",
-    "css-loader": "^3.1.0",
-    "fork-ts-checker-webpack-plugin": "^1.4.3",
     "node-sass": "^4.9.4",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1"
+    "sass-loader": "^7.1.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.4",
