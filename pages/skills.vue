@@ -1,5 +1,5 @@
 <template>
-  <div id="about">
+  <div id="skills">
   </div>
 </template>
 
@@ -7,20 +7,23 @@
 import { Component, Emit, Vue, Watch } from 'vue-property-decorator';
 import { Action } from 'vuex-class';
 
-import { devIconList } from '@/utils/devicons';
+import Typography from '@/components/atoms/Typography.vue';
 
 @Component({
   head(){
     return {
-      title: 'About'
+      title: 'Skills'
     }
+  },
+  components: {
+    Typography,
   }
 })
-export default class AboutPage extends Vue {
+export default class SkillsPage extends Vue {
   @Action('background/changeImage') readonly changeImage;
 
   get backgroundImage(): string {
-    return require('@/assets/images/background/about.jpg');
+    return require('@/assets/images/background/skills.jpg');
   }
 
   created(){
@@ -29,7 +32,6 @@ export default class AboutPage extends Vue {
 }
 </script>
 <style scoped lang="scss">
-#about {
+#skills {
 }
-
 </style>
