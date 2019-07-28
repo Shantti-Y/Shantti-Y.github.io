@@ -1,8 +1,26 @@
 <template>
   <div class="contact-form">
-    <text-field className="field" field="name" valid="true" :value="data.name" @update:value="newValue => updateValue('name', newValue)" />
-    <text-field className="field" field="email" valid="true" :value="data.email" @update:value="newValue => updateValue('email', newValue)" />
-    <textarea-field className="field" field="message" valid="true" :value="data.message" @update:value="newValue => updateValue('message', newValue)" />
+    <text-field
+      className="field"
+      field="name"
+      valid="true"
+      :value="data.name"
+      @update:value="newValue => updateValue('name', newValue)"
+    />
+    <text-field
+      className="field"
+      field="email"
+      valid="true" 
+      value="data.email"
+      @update:value="newValue => updateValue('email', newValue)"
+    />
+    <textarea-field
+      className="field"
+      field="message"
+      valid="true"
+      :value="data.message"
+      @update:value="newValue => updateValue('message', newValue)"
+    />
   </div>
 </template>
 <script lang="ts">
