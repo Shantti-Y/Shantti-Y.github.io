@@ -1,14 +1,18 @@
 <template>
   <div id="works">
-    <headline text="Works" />
+    <headline text="WORKS" />
     <div class="work-set">
-      <toned-image
-        v-for="(work, idx) in works"
+      <nuxt-link
+        v-for="(work, idx) in workList"
         :key="idx"
-        :imgSrc="work.img"
-        :name="work.name"
-        :role="work.role"
-      />
+        :to="work.path"
+      >
+        <toned-image
+          :imgSrc="work.img"
+          :name="work.name"
+          :role="work.role"
+        />
+      </nuxt-link>
     </div>
     <div class="link-area">
       <text-link text="Let me contact you" path="/contact" />
@@ -23,6 +27,8 @@ import { Action } from 'vuex-class';
 import Headline from '@/components/molecules/Headline.vue';
 import TonedImage from '@/components/molecules/TonedImage.vue';
 import TextLink from '@/components/atoms/TextLink.vue';
+
+import works from '@/utils/works';
 
 @Component({
   head(){
@@ -39,13 +45,21 @@ import TextLink from '@/components/atoms/TextLink.vue';
 export default class WorksPage extends Vue {
   @Action('background/changeImage') readonly changeImage;
 
-  get works() {
-    return [
-      { name: 'Nikocale', role: 'Design / Web Development', img: require('@/assets/images/works/nikocale/desktop2.jpg'), path: '/nikocale' },
-      { name: 'Setlify', role: 'Design / Web Development', img: require('@/assets/images/works/setlify/desktop1.jpg'), path: '/setlify' },
-      { name: 'Yakukyari', role: 'Web Development', img: require('@/assets/images/works/yakukyari/desktop1.jpg'), path: '/yakukyari' },
-      { name: 'DealXpert', role: 'Web Development / DB Design', img: require('@/assets/images/works/dealxpert/desktop1.jpg'), path: '/dealxpert' }
-    ];
+  get workList(): {
+    name: string,
+    role: string,
+    img: string,
+    path: string
+  }[] {
+    return Object.keys(works).map(key => {
+      const work = works[key];
+      return {
+        name: work.headline,
+        role: work.roleShort,
+        img: work.thumbnail,
+        path: `/works/${key}`
+      }
+    });
   }
 
   get backgroundImage(): string {
@@ -64,7 +78,7 @@ export default class WorksPage extends Vue {
     align-items: start;
   }
   .link-area {
-    margin-top: 160px;
+    margin-top: 120px;
   }
 }
 

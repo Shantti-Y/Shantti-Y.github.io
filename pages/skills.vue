@@ -1,6 +1,6 @@
 <template>
   <div id="skills">
-    <headline text="This is what I can do..." />
+    <headline text="SKILLS" />
     <div class="skill-sets">
       <skill-set
         v-for="(skillSet, idx) in skillSets"
@@ -117,7 +117,7 @@ export default class SkillsPage extends Vue {
     align-items: start;
   }
   .link-area {
-    margin-top: 160px;
+    margin-top: 120px;
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <headline text="Welcome" />
+    <headline text="WELCOME" />
     <sub-headline text="I'm Takahiro yoshioka" />
     <sub-headline text="A full-stack web developer" />
     <paragraph text="Specializing Ruby on Rails and Kotlin web development. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here." />
@@ -52,7 +52,7 @@ export default class IndexPage extends Vue {
     margin-top: 45px;
   }
   .link-area {
-    margin-top: 160px;
+    margin-top: 120px;
   }
 }
 </style>
