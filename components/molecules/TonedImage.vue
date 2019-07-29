@@ -86,7 +86,7 @@ export default class TonedImage extends Mixins(ClassName) {
     }
   }
 
-  @media all and (max-width: 599px) {
+  @media all and (max-width: 699px) {
     .toned-image {
       width: 100%;
       display: block;
@@ -101,7 +101,7 @@ export default class TonedImage extends Mixins(ClassName) {
       }
     }
   }
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 700px) {
     .toned-image {
       display: inline-block;
 

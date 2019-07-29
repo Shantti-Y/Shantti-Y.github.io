@@ -121,20 +121,23 @@ export default class SkillsPage extends Vue {
   }
 }
 
-@media all and (max-width: 959px) {
+@media all and (max-width: 699px) {
   #skills {
     .skill-set {
       width: 100%;
+      display: block;
     }
   }
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 700px) {
   #skills {
     .skill-set {
       width: calc(50% - 70px);
       margin-left: 35px;
       margin-right: 35px;
+      display: inline-block;
+      
     }
   }
 }

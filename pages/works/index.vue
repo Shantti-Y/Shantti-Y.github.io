@@ -82,7 +82,7 @@ export default class WorksPage extends Vue {
   }
 }
 
-@media all and (max-width: 959px) {
+@media all and (max-width: 699px) {
   #works {
     .toned-image {
       width: 100%;
@@ -90,7 +90,7 @@ export default class WorksPage extends Vue {
   }
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 700px) {
   #works {
     .toned-image {
       width: calc(50% - 70px);

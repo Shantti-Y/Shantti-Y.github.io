@@ -44,32 +44,9 @@ import Copyright from '@/components/molecules/Copyright.vue';
   }
 })
 export default class DesktopNavMenu extends Mixins(ClassName) {
-
-  get navs(): { to: string, text: string }[] {
-    return [
-      { to: '/', text: 'HOME' },
-      { to: '/about', text: 'ABOUT' },
-      { to: '/skills', text: 'SKILLS' },
-      { to: '/works', text: 'WORKS' },
-      { to: '/contact', text: 'CONTACT' }
-    ];
-  }
-
-  get socials(): { name: string, url: string }[] {
-    return [
-      { name: 'twitter', url: 'https://twitter.com/Shantti_Y' },
-      { name: 'facebook', url: 'https://www.facebook.com/hammpilot' },
-      { name: 'octocat', url: 'https://github.com/Shantti-Y' },
-      { name: 'linkedin', url: 'https://www.linkedin.com/in/takahiro-yoshioka-a4207a141/' }
-    ];
-  }
-
-  get copyright(): { from: number, to: number } {
-    return {
-      from: 2019,
-      to: 2019
-    }
-  }
+  @Prop({ type: Array, required: true }) readonly navs;
+  @Prop({ type: Array, required: true }) readonly socials;
+  @Prop({ type: Object, required: true }) readonly copyright;
 }
 </script>
 <style lang="scss" scoped>

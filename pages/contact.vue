@@ -37,13 +37,8 @@ export default class ContactPage extends Vue {
 </script>
 <style lang="scss">
 #contact {
-}
-
-@media all and (min-width: 960px) {
-  #contact {
-    .contact-form {
-      text-align: center;
-    }
+  .contact-form {
+    text-align: center;
   }
 }
 </style>

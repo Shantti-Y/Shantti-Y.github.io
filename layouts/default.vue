@@ -1,6 +1,15 @@
 <template>
   <div id="default" :style="backgroundStyle">
-    <desktop-nav-menu />
+    <desktop-nav-menu
+      :navs="navs"
+      :socials="socials"
+      :copyright="copyright"
+    />
+    <mobile-nav-menu
+      :navs="navs"
+      :socials="socials"
+      :copyright="copyright"
+    />
     <div id="page-contents">
       <nuxt />
     </div>
@@ -28,7 +37,34 @@ export default class DefaultLayout extends Vue {
       backgroundImage: `linear-gradient(rgba(2, 0, 40, 0.87), rgba(2, 0, 40, 0.87)), url(${this.currentImage})`
     };
   }
+
+  get navs(): { to: string, text: string }[] {
+    return [
+      { to: '/', text: 'HOME' },
+      { to: '/about', text: 'ABOUT' },
+      { to: '/skills', text: 'SKILLS' },
+      { to: '/works', text: 'WORKS' },
+      { to: '/contact', text: 'CONTACT' }
+    ];
+  }
+
+  get socials(): { name: string, url: string }[] {
+    return [
+      { name: 'twitter', url: 'https://twitter.com/Shantti_Y' },
+      { name: 'facebook', url: 'https://www.facebook.com/hammpilot' },
+      { name: 'octocat', url: 'https://github.com/Shantti-Y' },
+      { name: 'linkedin', url: 'https://www.linkedin.com/in/takahiro-yoshioka-a4207a141/' }
+    ];
+  }
+
+  get copyright(): { from: number, to: number } {
+    return {
+      from: 2019,
+      to: 2019
+    }
+  }
 }
+
 </script>
 <style lang="scss" scoped>
 #default {

@@ -1,33 +1,37 @@
 <template>
   <div class="mobile-nav-menu" :class="classNames">
-    <logo className="logo" />
-    <div class="nav-buttons">
-      <nav-button
-        v-for="(nav, idx) in navs"
-        :key="idx"
-        className="nav-button"
-        :to="nav.to"
-        :text="nav.text"
+    <div @click="toggleOpened">
+      <logo className="logo" />
+    </div>
+    <div class="nav-contents" v-show="opened">
+      <div class="nav-buttons" @click="toggleOpened">
+        <nav-button
+          v-for="(nav, idx) in navs"
+          :key="idx"
+          className="nav-button"
+          :to="nav.to"
+          :text="nav.text"
+        />
+      </div>
+      <div class="social-icons">
+        <social-button
+          v-for="(social, idx) in socials"
+          :key="idx"
+          className="social-icon"
+          :name="social.name"
+          :url="social.url"
+        />
+      </div>
+      <copyright
+        className="copyright"
+        :from="copyright.from"
+        :to="copyright.to"
       />
     </div>
-    <div class="social-icons">
-      <social-button
-        v-for="(social, idx) in socials"
-        :key="idx"
-        className="social-icon"
-        :name="social.name"
-        :url="social.url"
-      />
-    </div>
-    <copyright
-      className="copyright"
-      :from="copyright.from"
-      :to="copyright.to"
-    />
   </div>
 </template>
 <script lang="ts">
-import { Component, Mixins, Prop } from 'vue-property-decorator';
+import { Component, Mixins, Prop, Emit } from 'vue-property-decorator';
 
 import ClassName from '@/components/atoms/ClassName';
 import Logo from '@/components/atoms/Logo.vue';
@@ -45,79 +49,77 @@ import Copyright from '@/components/molecules/Copyright.vue';
   }
 })
 export default class MobileNavMenu extends Mixins(ClassName) {
+  @Prop({ type: Array, required: true }) readonly navs;
+  @Prop({ type: Array, required: true }) readonly socials;
+  @Prop({ type: Object, required: true }) readonly copyright;
 
-  get navs(): { to: string, text: string }[] {
-    return [
-      { to: '/', text: 'HOME' },
-      { to: '/about', text: 'ABOUT' },
-      { to: '/skills', text: 'SKILLS' },
-      { to: '/works', text: 'WORKS' },
-      { to: '/contact', text: 'CONTACT' }
-    ];
-  }
+  opened: boolean = true;
 
-  get socials(): { name: string, url: string }[] {
-    return [
-      { name: 'twitter', url: 'https://twitter.com/Shantti_Y' },
-      { name: 'facebook', url: 'https://www.facebook.com/hammpilot' },
-      { name: 'octocat', url: 'https://github.com/Shantti-Y' },
-      { name: 'linkedin', url: 'https://www.linkedin.com/in/takahiro-yoshioka-a4207a141/' }
-    ];
+  @Emit()
+  toggleOpened(){
+    console.log(this.opened)
+    this.opened = !this.opened;
   }
-
-  get copyright(): { from: number, to: number } {
-    return {
-      from: 2019,
-      to: 2019
-    }
-  }
+  
 }
 </script>
 <style lang="scss" scoped>
   .mobile-nav-menu {
-    width: 100%;
-    max-height: 800px;
-    background: rgba(2, 0, 40, 1);
-    padding: 18px 0 36px 0;
-
     .logo {
       width: 55px;
       height: 55px;
-      margin: 0 18px;
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      z-index: 100;
     }
 
-    .nav-buttons {
-      margin-top: 36px;
+    .nav-contents {
+      width: 100%;
+      height: 100vh;
+      z-index: 90;
+      position: fixed;
+      background: rgba(2, 0, 40, 1);
+      padding-top: 72px;
+      left: 0;
+      right: 0;
 
-      .nav-button {
-        margin: 0 auto;
+      .nav-buttons {
+        margin-top: 36px;
+
+        .nav-button {
+          margin: 0 auto;
+        }
       }
-    }
 
-    .social-icons {
-      margin-top: 24px;
-      text-align: center;
+      .social-icons {
+        margin-top: 60px;
+        text-align: center;
 
-      .social-icon {
-        display: block;
-        margin-bottom: 16px;
+        .social-icon {
+          display: binline-lock;
+          margin: 0 16px;
+        }
       }
-    }
 
-    .copyright {
-      text-align: center;
-      margin-top: 36px;
-      padding: 0 20px;
+      .copyright {
+        position: fixed;
+        text-align: center;
+        padding: 0 20px;
+        bottom: 36px;
+        right: 0;
+        left: 0;
+      }
     }
   }
 
-  @media all and (max-width: 599px) {
+  @media all and (max-width: 959px) {
     .mobile-nav-menu {
       display: block;
     }
   }
 
-  @media all and (min-width: 600px) {
+  @media all and (min-width: 960px) {
     .mobile-nav-menu {
       display: none;
     }

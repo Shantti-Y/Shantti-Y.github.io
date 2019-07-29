@@ -42,6 +42,7 @@ export default class SkillSet extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .skill-set {
+    vertical-align: top;
     .skill-header {
       position: relative;
       margin: 0 6px 16px 6px;
@@ -58,19 +59,6 @@ export default class SkillSet extends Mixins(ClassName) {
     }
     .percentage-progress {
       margin-top: 16px;
-    }
-  }
-
-  @media all and (max-width: 959px) {
-    .skill-set {
-      display: block;
-    }
-  }
-
-  @media all and (min-width: 960px) {
-    .skill-set {
-      display: inline-block;
-      vertical-align: top;
     }
   }
 </style>
