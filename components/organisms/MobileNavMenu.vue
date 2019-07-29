@@ -53,7 +53,7 @@ export default class MobileNavMenu extends Mixins(ClassName) {
   @Prop({ type: Array, required: true }) readonly socials;
   @Prop({ type: Object, required: true }) readonly copyright;
 
-  opened: boolean = true;
+  opened: boolean = false;
 
   @Emit()
   toggleOpened(){

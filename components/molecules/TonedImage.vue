@@ -63,7 +63,6 @@ export default class TonedImage extends Mixins(ClassName) {
       position: relative;
       .work-image {
         opacity: 0.5;
-        
       }
     }
 

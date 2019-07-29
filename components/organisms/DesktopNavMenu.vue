@@ -1,28 +1,37 @@
 <template>
   <div class="desktop-nav-menu" :class="classNames">
-    <logo className="logo" />
-    <div class="nav-buttons">
-      <nav-button
-        v-for="(nav, idx) in navs"
-        :key="idx"
-        :to="nav.to"
-        :text="nav.text"
-      />
+    <div class="bar left">
+      <div class="element-container">
+          <logo className="element logo" />
+        <div class="element nav-buttons">
+          <nav-button
+            v-for="(nav, idx) in navs"
+            :key="idx"
+            :to="nav.to"
+            :text="nav.text"
+          />
+        </div>
+        
+        <copyright
+          className="element copyright"
+          :from="copyright.from"
+          :to="copyright.to"
+        />
+      </div>
     </div>
-    <div class="social-icons">
-      <social-button
-        v-for="(social, idx) in socials"
-        :key="idx"
-        className="social-icon"
-        :name="social.name"
-        :url="social.url"
-      />
+    <div class="bar right">
+      <div class="element-container">
+        <div class="element social-icons">
+          <social-button
+            v-for="(social, idx) in socials"
+            :key="idx"
+            className="social-icon"
+            :name="social.name"
+            :url="social.url"
+          />
+        </div>
+      </div>
     </div>
-    <copyright
-      className="copyright"
-      :from="copyright.from"
-      :to="copyright.to"
-    />
   </div>
 </template>
 <script lang="ts">
@@ -51,37 +60,59 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .desktop-nav-menu {
-    position: fixed;
-    width: 150px;
-    min-height: 100vh;
-    background: rgba(2, 0, 40, 1);
-    padding: 24px 0;
+    
+    .bar {
+      position: fixed;
+      
+      background: rgba(2, 0, 40, 1);
 
-    .logo {
-      width: 65px;
-      height: 65px;
-      margin: 0 auto;
-    }
+      .element-container {
+        position: relative;
+        height: 100vh;
+      }
 
-    .nav-buttons {
-      margin-top: 36px;
-    }
-
-    .social-icons {
-      margin-top: 20px;
-      text-align: center;
-
-      .social-icon {
-        display: block;
-        margin-bottom: 16px;
+      .element {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
       }
     }
 
-    .copyright {
-      position: fixed;
-      bottom: 24px;
-      padding: 0 20px;
+    .left {
+      left: 0;
+      width: 150px;
+      
+      .logo {
+        width: 65px;
+        height: 65px;
+        top: 42px;
+      }
+
+      .nav-buttons {
+        top: 160px;
+      }
+
+      .copyright {
+        bottom: 36px;
+      }
     }
+
+    .right {
+      right: 0;
+      width: 75px;
+      .social-icons {
+        bottom: 36px;
+
+        .social-icon {
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    
   }
 
   @media all and (max-width: 959px) {
