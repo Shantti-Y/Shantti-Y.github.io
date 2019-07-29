@@ -9,21 +9,21 @@
       <text-field
         className="field"
         field="name"
-        valid="true"
+        :valid="true"
         :value="form.name"
         @update:value="newValue => updateValue('name', newValue)"
       />
       <text-field
         className="field"
         field="email"
-        valid="true" 
+        :valid="true" 
         :value="form.email"
         @update:value="newValue => updateValue('email', newValue)"
       />
       <textarea-field
         className="field"
         field="message"
-        valid="true"
+        :valid="true"
         :value="form.message"
         @update:value="newValue => updateValue('message', newValue)"
       />
