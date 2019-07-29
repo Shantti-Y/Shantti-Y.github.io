@@ -29,7 +29,9 @@ const config: NuxtConfiguration = {
       indentedSyntax: true
     }
   },
-  
+  modules: [
+    '@nuxtjs/dotenv'
+  ]
 };
 
 export default config;

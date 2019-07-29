@@ -1,26 +1,34 @@
 <template>
   <div class="contact-form">
-    <text-field
-      className="field"
-      field="name"
-      valid="true"
-      :value="data.name"
-      @update:value="newValue => updateValue('name', newValue)"
-    />
-    <text-field
-      className="field"
-      field="email"
-      valid="true" 
-      value="data.email"
-      @update:value="newValue => updateValue('email', newValue)"
-    />
-    <textarea-field
-      className="field"
-      field="message"
-      valid="true"
-      :value="data.message"
-      @update:value="newValue => updateValue('message', newValue)"
-    />
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      action="/"
+    >
+      <text-field
+        className="field"
+        field="name"
+        valid="true"
+        :value="form.name"
+        @update:value="newValue => updateValue('name', newValue)"
+      />
+      <text-field
+        className="field"
+        field="email"
+        valid="true" 
+        :value="form.email"
+        @update:value="newValue => updateValue('email', newValue)"
+      />
+      <textarea-field
+        className="field"
+        field="message"
+        valid="true"
+        :value="form.message"
+        @update:value="newValue => updateValue('message', newValue)"
+      />
+      <button @click="sendMailToMe">send</button>
+    </form>
   </div>
 </template>
 <script lang="ts">
@@ -37,7 +45,7 @@ import TextareaField from '@/components/molecules/TextareaField.vue';
   }
 })
 export default class ContactForm extends Mixins(ClassName) {
-  data = {
+  form = {
     name: '',
     email: '',
     message: ''
@@ -45,7 +53,19 @@ export default class ContactForm extends Mixins(ClassName) {
 
   @Emit()
   updateValue(key, newValue){
-    this.data[key] = newValue;
+    this.form[key] = newValue;
+  }
+
+  @Emit()
+  sendMailToMe(){
+    fetch('/sendMail', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify(this.form)
+    });
+  }
+
+  created(){
   }
 }
 </script>
