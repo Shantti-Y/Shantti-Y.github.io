@@ -85,9 +85,9 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
       width: 150px;
       
       .logo {
-        width: 65px;
-        height: 65px;
-        top: 42px;
+        width: 100px;
+        height: 100px;
+        top: 22px;
       }
 
       .nav-buttons {
@@ -101,7 +101,7 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
 
     .right {
       right: 0;
-      width: 75px;
+      width: 68px;
       .social-icons {
         bottom: 36px;
 
