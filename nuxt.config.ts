@@ -30,7 +30,8 @@ const config: NuxtConfiguration = {
     }
   },
   modules: [
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-svg'
   ]
 };
 
