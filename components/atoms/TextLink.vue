@@ -21,7 +21,7 @@ export default class TextLink extends Mixins(ClassName) {
   .text-link {
     color: #00ff9f;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   @media all and (max-width: 959px) {

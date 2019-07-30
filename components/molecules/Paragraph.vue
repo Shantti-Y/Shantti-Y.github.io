@@ -21,7 +21,8 @@ export default class Paragraph extends Mixins(ClassName) {
 <style lang="scss" scoped>
   .paragraph {
     .typography {
-      color: rgba(143, 143, 143, 1);
+      color: rgba(153, 153, 153, 1);
     }
+    margin: 18px 0;
   }
 </style>

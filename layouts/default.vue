@@ -80,7 +80,16 @@ export default class DefaultLayout extends Vue {
   }
 }
 
-@media all and (max-width: 959px) {
+@media all and (max-width: 599px) {
+  #default {
+    #page-contents {
+      margin : 0 20px;
+      padding: 130px 0;
+    }
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 959px) {
   #default {
     #page-contents {
       margin : 0 32px;
@@ -92,9 +101,9 @@ export default class DefaultLayout extends Vue {
 @media all and (min-width: 960px) {
   #default {
     #page-contents {
-      width: calc(100% - (208px + 108px));
-      margin: 0 108px 0 208px;
-      padding: 90px 0;
+      width: calc(100% - (190px + 108px));
+      margin: 0 108px 0 190px;
+      padding: 110px 0;
     }
   }
 }

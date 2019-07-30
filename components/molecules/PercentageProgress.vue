@@ -40,20 +40,19 @@ export default class PercentageProgress extends Mixins(ClassName) {
 
     .header {
       padding: 0 5px; 
-      margin-bottom: 12px;
+      margin-bottom: 6px;
       overflow: hidden;
       * {
         color: rgba(246, 236, 94, 1);
+        font-size: 16px;
       }
       .name {
         float: left;
         font-weight: bold;
-        font-size: 18px;
       }
 
       .percentage {
         float: right;
-        font-size: 16px;
       }
     }
     

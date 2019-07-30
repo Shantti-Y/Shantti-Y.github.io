@@ -2,7 +2,7 @@
   <div class="mobile-nav-menu" :class="classNames">
     <div class="navbar">
       <div class="menu-opener" @click="toggleOpened">
-        <ion-icon className="menu-icon" name="md-reorder" :size="40" />
+        <ion-icon className="menu-icon" name="md-reorder" :size="45" />
       </div>
       <div class="logo-wrapper">
         <logo className="logo" />
@@ -73,35 +73,28 @@ export default class MobileNavMenu extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .mobile-nav-menu {
-    .navbar {
+    .menu-icon {
       background: rgba(2, 0, 40, 1);
-      height: 60px;
-      width: 100%;
-      z-index: 100;
+      padding: 5px;
       position: fixed;
-      top: 0;
-      .menu-icon {
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 6px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        z-index: 100;
-        color: #Ea00d9;
-      }
+      top: 6px;
+      left: 6px;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      z-index: 100;
+      color: #00ff9f;
+    }
 
-      .logo {
-        background: rgba(2, 0, 40, 1);
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        right: 6px;
-        z-index: 100;
-      }
+    .logo {
+      background: rgba(2, 0, 40, 1);
+      padding: 5px;
+      width: 45px;
+      height: 45px;
+      position: fixed;
+      top: 6px;
+      right: 6px;
+      z-index: 100;
     }
 
     .nav-contents {

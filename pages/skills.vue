@@ -133,11 +133,15 @@ export default class SkillsPage extends Vue {
 @media all and (min-width: 700px) {
   #skills {
     .skill-set {
-      width: calc(50% - 70px);
-      margin-left: 35px;
-      margin-right: 35px;
+      width: calc(50% - 35px);
       display: inline-block;
       
+      &:nth-child(odd){
+        margin-right: 35px;
+      }
+      &:nth-child(even){
+        margin-left: 35px;
+      }
     }
   }
 }

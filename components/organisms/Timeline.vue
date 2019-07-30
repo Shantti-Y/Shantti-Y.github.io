@@ -70,7 +70,7 @@ export default class Timeline extends Mixins(ClassName) {
         border-radius: 6px;
 
         .timeline-date {
-          color: rgba(78, 78, 78, 1);
+          color: rgba(110, 110, 110, 1);
           margin-bottom: 28px;
         }
 

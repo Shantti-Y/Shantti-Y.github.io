@@ -13,20 +13,23 @@ export default class Typography extends Mixins(ClassName) {
 }
 </script>
 <style lang="scss" scoped>
-  h1 { font-size: 54px; }
-  h2 { font-size: 34px; }
-  h3 { font-size: 28px; }
-  h4 { font-size: 22px; }
-  h5 { font-size: 16px; }
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  h2 { font-size: 28px; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 18px; }
+  h5 { font-size: 14px; }
   h6 { font-size: 10px; }
   h1, h2, h3, h4, h5, h6 {
     line-height: 140%;
   }
   p {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 160%;
   }
   span {
-    font-size: 14px;
+    font-size: 15px;
   }
 </style>

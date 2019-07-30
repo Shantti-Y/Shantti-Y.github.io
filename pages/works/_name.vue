@@ -17,7 +17,6 @@
       />
     </div>
     <carousel :screenShots="screenShots" />
-
     <sub-headline text="Overview" />
     <paragraph :text="overview" />
     <sub-headline text="Background" />
@@ -113,25 +112,32 @@ export default class WorksPage extends Vue {
   .role {
     margin-bottom: 45px;
   }
-  .external-links {
-    margin-bottom: 60px;
-  }
   .sub-headline {
     margin-top: 55px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
   .link-area {
     margin-top: 65px;
   }
-}
 
-@media all and (max-width: 959px) {
-  #works-detail {
+  .tech-stacklist-item {
+    margin: 5px 0;
   }
 }
 
-@media all and (min-width: 960px) {
-  #dworks-detailetail {
+@media all and (max-width: 599px) {
+  #works-detail {
+    .external-links {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media all and (min-width: 600px) {
+  #works-detail {
+    .external-links {
+      margin-bottom: 60px;
+    }
   }
 }
 </style>

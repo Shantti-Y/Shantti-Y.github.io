@@ -6,6 +6,7 @@
         v-for="(work, idx) in workList"
         :key="idx"
         :to="work.path"
+        class="work"
       >
         <toned-image
           :imgSrc="work.img"
@@ -92,10 +93,16 @@ export default class WorksPage extends Vue {
 
 @media all and (min-width: 700px) {
   #works {
-    .toned-image {
-      width: calc(50% - 70px);
-      margin-left: 35px;
-      margin-right: 35px;
+    .work {
+      width: calc(50% - 35px);
+      display: inline-block;
+
+      &:nth-child(odd){
+        margin-right: 35px;
+      }
+      &:nth-child(even){
+        margin-left: 35px;
+      }
     }
   }
 }

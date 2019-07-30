@@ -51,7 +51,7 @@ export default class SkillSet extends Mixins(ClassName) {
       }
       .typography {
         position: absolute;
-        top: 7px;
+        top: 12px;
         margin-left: 24px;
         align-items: center;
         font-style: italic;
