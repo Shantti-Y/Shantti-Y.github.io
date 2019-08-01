@@ -14,9 +14,9 @@ const config: NuxtConfiguration = {
       { name: 'description', content: metaDescription }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' },
       { rel: 'stylesheet', href: 'https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Signika&display=swap' },
+      // TODO: get favicon.ico
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ]
   },
   css: [
