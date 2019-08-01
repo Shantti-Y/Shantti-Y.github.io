@@ -107,4 +107,14 @@ export default class DefaultLayout extends Vue {
     }
   }
 }
+
+@media all and (min-width: 1200px) {
+  #default {
+    #page-contents {
+      width: calc(100% - (260px + 178px));
+      margin: 0 178px 0 260px;
+      padding: 110px 0;
+    }
+  }
+}
 </style>

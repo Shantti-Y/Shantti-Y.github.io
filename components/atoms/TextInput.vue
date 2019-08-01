@@ -7,6 +7,7 @@
     class="text-input"
     cols="30"
     rows="10"
+    autocomplete="off"
     :value="value"
     @change="e => handleChanged(e)"
   />
@@ -34,14 +35,24 @@ export default class TextInput extends Mixins(ClassName) {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 2px solid #00FF9F;
+    border-bottom: 2px solid rgba(2, 0, 40, 0.85);
     color: #ffffff;
-    padding: 12px;
+    padding: 13px 12px 11px 12px;
     box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid #00FF9F;
+      transition: 0.6s ease all;
+    }
   }
   .error {
     background-color: rgba(52, 7, 7, 0.85);
-    border-bottom: 2px solid #d40e0d;
+    border-bottom: 2px solid rgba(52, 7, 7, 0.85);
+    &:focus {
+      border-bottom: 2px solid #d40e0d;
+    }
+    
   }
   @media all and (max-width: 599px) {
     .text-input {

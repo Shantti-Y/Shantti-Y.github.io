@@ -27,7 +27,7 @@
         :value="form.message"
         @update:value="newValue => updateValue('message', newValue)"
       />
-      <button @click="sendMailToMe">send</button>
+      <submit-button text="Send Mail" @submit="() => sendMailToMe" />
     </form>
   </div>
 </template>
@@ -37,11 +37,13 @@ import { Component, Mixins, Prop, Emit } from 'vue-property-decorator';
 import ClassName from '@/components/atoms/ClassName';
 import TextField from '@/components/molecules/TextField.vue';
 import TextareaField from '@/components/molecules/TextareaField.vue';
+import SubmitButton from '@/components/molecules/SubmitButton.vue';
 
 @Component({
   components: {
     TextField,
-    TextareaField
+    TextareaField,
+    SubmitButton
   }
 })
 export default class ContactForm extends Mixins(ClassName) {
@@ -57,16 +59,7 @@ export default class ContactForm extends Mixins(ClassName) {
   }
 
   @Emit()
-  sendMailToMe(){
-    fetch('/sendMail', {
-      method: 'POST',
-      mode: 'cors',
-      body: JSON.stringify(this.form)
-    });
-  }
-
-  created(){
-  }
+  sendMailToMe(){}
 }
 </script>
 <style lang="scss" scoped>

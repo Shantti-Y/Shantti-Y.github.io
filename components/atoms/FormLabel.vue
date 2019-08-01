@@ -18,7 +18,6 @@ export default class FormLabel extends Mixins(ClassName) {
 <style lang="scss" scoped>
   .form-label {
     font-size: 17px;
-    font-weight: bold;
     color: #00FF9F;
   }
   .error {
