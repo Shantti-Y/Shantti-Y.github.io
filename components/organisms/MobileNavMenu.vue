@@ -1,4 +1,5 @@
 <template>
+
   <div class="mobile-nav-menu" :class="classNames">
     <div class="navbar">
       <div class="menu-opener" @click="toggleOpened">
@@ -8,32 +9,36 @@
         <logo className="logo" />
       </div>
     </div>
-    
-    <div class="nav-contents" v-show="opened">
-      <div class="nav-buttons" @click="toggleOpened">
-        <nav-button
-          v-for="(nav, idx) in navs"
-          :key="idx"
-          className="nav-button"
-          :to="nav.to"
-          :text="nav.text"
-        />
+    <transition name="expand">
+      <div class="nav-background" :class="{ active: opened }" v-show="opened">
+        <div class="nav-contents">
+          <div class="nav-buttons">
+            <nav-button
+              v-for="(nav, idx) in navs"
+              :key="idx"
+              className="nav-button"
+              :to="nav.to"
+              :text="nav.text"
+              @click="toggleOpened"
+            />
+          </div>
+          <div class="social-icons">
+            <social-button
+              v-for="(social, idx) in socials"
+              :key="idx"
+              className="social-icon"
+              :name="social.name"
+              :url="social.url"
+            />
+          </div>
+          <copyright
+            className="copyright"
+            :from="copyright.from"
+            :to="copyright.to"
+          />
+        </div>
       </div>
-      <div class="social-icons">
-        <social-button
-          v-for="(social, idx) in socials"
-          :key="idx"
-          className="social-icon"
-          :name="social.name"
-          :url="social.url"
-        />
-      </div>
-      <copyright
-        className="copyright"
-        :from="copyright.from"
-        :to="copyright.to"
-      />
-    </div>
+    </transition>
   </div>
 </template>
 <script lang="ts">
@@ -73,8 +78,9 @@ export default class MobileNavMenu extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .mobile-nav-menu {
+    transition: height 200ms;
+    overflow: hidden;
     .menu-icon {
-      background: rgba(2, 0, 40, 1);
       padding: 5px;
       position: fixed;
       top: 6px;
@@ -87,7 +93,6 @@ export default class MobileNavMenu extends Mixins(ClassName) {
     }
 
     .logo {
-      background: rgba(2, 0, 40, 1);
       padding: 5px;
       width: 45px;
       height: 45px;
@@ -97,12 +102,27 @@ export default class MobileNavMenu extends Mixins(ClassName) {
       z-index: 100;
     }
 
-    .nav-contents {
-      width: 100%;
-      height: 100vh;
+    .nav-background {
+      overflow: hidden;
+      transition: all .5s;
+      width: 0;
+      height: 0;
       z-index: 90;
       position: fixed;
       background: rgba(2, 0, 40, 1);
+    }
+    .active {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .nav-contents {
+      transition: all .9s;
+      height: 100vh;
+      width: 100vw;
+      z-index: 90;
+      position: absolute;
+      
       padding-top: 72px;
       left: 0;
       right: 0;
@@ -126,15 +146,24 @@ export default class MobileNavMenu extends Mixins(ClassName) {
       }
 
       .copyright {
-        position: fixed;
+        position: absolute;
         text-align: center;
         padding: 0 20px;
-        bottom: 36px;
+        bottom: 150px;
         right: 0;
         left: 0;
       }
     }
   }
+ .expand-enter-active, .expand-leave-active {
+    transition: all .5s;
+  }
+  .expand-enter, .expand-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transition: all .5s;
+    height: 0;
+    width: 0;
+  }
+
 
   @media all and (max-width: 959px) {
     .mobile-nav-menu {
