@@ -13,14 +13,15 @@
       <div class="nav-background" :class="{ active: opened }" v-show="opened">
         <div class="nav-contents">
           <div class="nav-buttons">
-            <nav-button
-              v-for="(nav, idx) in navs"
-              :key="idx"
-              className="nav-button"
-              :to="nav.to"
-              :text="nav.text"
-              @click="toggleOpened"
-            />
+            <div @click="toggleOpened">
+              <nav-button
+                v-for="(nav, idx) in navs"
+                :key="idx"
+                className="nav-button"
+                :to="nav.to"
+                :text="nav.text"
+              />
+            </div>
           </div>
           <div class="social-icons">
             <social-button
