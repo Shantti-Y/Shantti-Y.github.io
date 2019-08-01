@@ -35,6 +35,9 @@ import TextLink from '@/components/atoms/TextLink.vue';
     SubHeadline,
     Paragraph,
     TextLink
+  },
+  transition: {
+    name: 'default'
   }
 })
 export default class AboutPage extends Vue {

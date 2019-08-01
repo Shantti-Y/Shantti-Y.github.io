@@ -165,7 +165,6 @@ export default class MobileNavMenu extends Mixins(ClassName) {
     width: 0;
   }
 
-
   @media all and (max-width: 959px) {
     .mobile-nav-menu {
       display: block;

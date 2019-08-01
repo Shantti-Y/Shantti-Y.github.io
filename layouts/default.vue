@@ -66,7 +66,7 @@ export default class DefaultLayout extends Vue {
 }
 
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 #default {
   min-height: 100vh;
   width: 100vw;
@@ -79,6 +79,14 @@ export default class DefaultLayout extends Vue {
     height: 100%;
   }
 }
+
+ .default-enter-active, .default-leave-active {
+    transition: all .5s;
+  }
+  .default-enter, .default-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transition: all .5s;
+    opacity: 0;
+  }
 
 @media all and (max-width: 599px) {
   #default {

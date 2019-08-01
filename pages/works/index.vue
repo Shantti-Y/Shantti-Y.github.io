@@ -41,6 +41,9 @@ import works from '@/utils/works';
     Headline,
     TonedImage, 
     TextLink
+  },
+  transition: {
+    name: 'default'
   }
 })
 export default class WorksPage extends Vue {

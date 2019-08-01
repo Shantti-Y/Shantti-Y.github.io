@@ -21,6 +21,9 @@ import ContactForm from '@/components/organisms/ContactForm.vue';
   components: {
     Headline,
     ContactForm
+  },
+  transition: {
+    name: 'default'
   }
 })
 export default class ContactPage extends Vue {

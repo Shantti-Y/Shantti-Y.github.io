@@ -72,6 +72,9 @@ import works from '@/utils/works';
       techStacks: work.techStacks,
       thumbnail: work.thumbnail
     }
+  },
+  transition: {
+    name: 'default'
   }
 })
 export default class WorksPage extends Vue {
