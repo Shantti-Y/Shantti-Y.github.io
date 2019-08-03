@@ -9,6 +9,7 @@
     :value="value"
     autocomplete="off"
     @change="e => handleChanged(e)"
+    @input="e => handleChanged(e)"
   />
 </template>
 <script lang="ts">
