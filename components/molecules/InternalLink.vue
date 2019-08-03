@@ -32,7 +32,7 @@ export default class InternalLink extends Mixins(ClassName) {
   .internal-link {
     display: inline-block;
     margin-right: 50px;
-    color: #00ff9f;
+    color: #00ff9f !important;
     text-decoration: none;
     font-size: 15px;
     padding: 6px 0;
