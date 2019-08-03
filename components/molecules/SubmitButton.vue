@@ -1,5 +1,5 @@
 <template>
-  <button class="submit-button" @click="handleSubmit"><typography variant="span" :text="text" /></button>
+  <button class="submit-button" @click.prevent="handleSubmit"><typography variant="span" :text="text" /></button>
 </template>
 <script lang="ts">
 import { Component, Mixins, Prop, Emit } from 'vue-property-decorator';
@@ -12,11 +12,13 @@ import Typography from '@/components/atoms/Typography.vue';
     Typography
   }
 })
-export default class ContactForm extends Mixins(ClassName) {
+export default class SubmitButton extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
 
   @Emit('submit')
-  handleSubmit(){}
+  handleSubmit(){
+    return ;
+  }
 }
 </script>
 <style lang="scss" scoped>

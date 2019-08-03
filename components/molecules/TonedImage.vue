@@ -5,7 +5,6 @@
       <work-image className="work-image" :src="imgSrc" :alt="name" />
     </div>
     <div class="work-header">
-      <ion-icon className="icon" name="md-arrow-forward" :size="30" />
       <typography className="typography work-name" variant="h4" :text="name" />
       <typography className="typography work-role" variant="h5" :text="role" />
     </div>
@@ -31,7 +30,7 @@ export default class TonedImage extends Mixins(ClassName) {
   @Prop({ type: String, required: true}) readonly name;
   @Prop({ type: String, required: true}) readonly role;
 
-  elementWidth = 410;
+  elementWidth = 600;
 
   get imageHeightStyle (): object {
     return {
@@ -95,7 +94,7 @@ export default class TonedImage extends Mixins(ClassName) {
       margin: 0 16px;
       position: relative;
 
-      .typography, .icon {
+      .typography {
         color: rgba(143, 143, 143, 1);
       }
       .work-name {
@@ -103,14 +102,6 @@ export default class TonedImage extends Mixins(ClassName) {
       }
       .work-role {
         margin-top: 6px;
-      }
-      .icon {
-        transition: all .3s;
-        position: absolute;
-        top: 0;
-        left: 80%;
-        right: 0;
-        opacity: 0;
       }
     }
 
@@ -125,12 +116,6 @@ export default class TonedImage extends Mixins(ClassName) {
         .work-image {
           opacity: 0.3;
           transition:  .6s;
-        }
-      }
-      .work-header {
-        .icon {
-          opacity: 1;
-          left: 95%;
         }
       }
     }

@@ -9,25 +9,25 @@
       <text-field
         className="field"
         field="name"
-        :valid="true"
+        :valid="isValidName"
         :value="form.name"
         @update:value="newValue => updateValue('name', newValue)"
       />
       <text-field
         className="field"
         field="email"
-        :valid="true" 
+        :valid="isValidEmail" 
         :value="form.email"
         @update:value="newValue => updateValue('email', newValue)"
       />
       <textarea-field
         className="field"
         field="message"
-        :valid="true"
+        :valid="isValidMessage"
         :value="form.message"
         @update:value="newValue => updateValue('message', newValue)"
       />
-      <submit-button text="Send Mail" @submit="() => sendMailToMe" />
+      <submit-button text="Send Mail" @submit="() => sendMailToMe()" />
     </form>
   </div>
 </template>
@@ -47,10 +47,32 @@ import SubmitButton from '@/components/molecules/SubmitButton.vue';
   }
 })
 export default class ContactForm extends Mixins(ClassName) {
-  form = {
+  form: { name: string, email: string, message: string } = {
     name: '',
     email: '',
     message: ''
+  }
+
+  sendButtonPushed: boolean = false;
+
+  get isValidName(){
+    const name = this.form.name;
+    return !this.sendButtonPushed || name.length > 0;
+  }
+
+  get isValidEmail(){
+    const email = this.form.email;
+    const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return !this.sendButtonPushed || (email.length > 0 && emailRegex.test(email));
+  }
+
+  get isValidMessage(){
+    const message = this.form.message;
+    return !this.sendButtonPushed || message.length > 0;
+  }
+
+  get isAllValid(){
+    return this.isValidName && this.isValidEmail && this.isValidMessage;
   }
 
   @Emit()
@@ -59,7 +81,13 @@ export default class ContactForm extends Mixins(ClassName) {
   }
 
   @Emit()
-  sendMailToMe(){}
+  sendMailToMe(){
+    this.sendButtonPushed = true;
+    if(this.isAllValid){
+      const formElement = this.$el.querySelector('form');
+      if(formElement) formElement.submit();
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
