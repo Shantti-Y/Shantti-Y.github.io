@@ -17,6 +17,7 @@ import ClassName from '@/components/atoms/ClassName';
 import WorkImage from '@/components/atoms/WorkImage.vue';
 import Typography from '@/components/atoms/Typography.vue';
 import IonIcon from '@/components/atoms/IonIcon.vue';
+import { setTimeout } from 'timers';
 
 @Component({
   components: {
@@ -30,7 +31,7 @@ export default class TonedImage extends Mixins(ClassName) {
   @Prop({ type: String, required: true}) readonly name;
   @Prop({ type: String, required: true}) readonly role;
 
-  elementWidth = 600;
+  elementWidth = 400;
 
   get imageHeightStyle (): object {
     return {
@@ -47,7 +48,7 @@ export default class TonedImage extends Mixins(ClassName) {
     window.addEventListener('resize', () => {
       this.handleWindowResize();
     });
-    this.handleWindowResize();
+    setTimeout(() => { this.handleWindowResize }, 100);
   }
 
   beforeDestroy() {
@@ -142,7 +143,9 @@ export default class TonedImage extends Mixins(ClassName) {
 
       .work-image-container {
         width: 100%;
-        height: 275px;
+        .work-image {
+          max-height: 300px;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@ const work: Work = {
   headline: 'Portfolio',
   role: 'Design / Web Development (Private)',
   githubUrl: "https://github.com/Shantti-Y/Shantti-Y.github.io",
-  websiteUrl: "https://friendly-keller-883efa.netlify.com",
+  websiteUrl: "https://shanttiy.netlify.com",
   screenShots: [
     { src: require('@/assets/images/works/portfolio/desktop1.jpg'), alt: 'portfolio-pic-1' },
     { src: require('@/assets/images/works/portfolio/desktop2.jpg'), alt: 'portfolio-pic-2' },

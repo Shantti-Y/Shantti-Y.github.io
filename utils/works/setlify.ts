@@ -3,8 +3,8 @@ import { Work } from '@/utils/works';
 const work: Work = {
   headline: 'Setlify',
   role: 'Front, Back-end Development (Private)',
-  githubUrl: 'https://setlify-236901.appspot.com',
-  websiteUrl: 'https://github.com/Shantti-Y/SetList',
+  websiteUrl: 'https://setlify-236901.appspot.com',
+  githubUrl: 'https://github.com/Shantti-Y/SetList',
   screenShots: [
     { src: require('@/assets/images/works/setlify/desktop1.jpg'), alt: 'setlify-pic-1' },
     { src: require('@/assets/images/works/setlify/desktop2.jpg'), alt: 'setlify-pic-2' },

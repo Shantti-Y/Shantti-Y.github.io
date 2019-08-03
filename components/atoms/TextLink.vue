@@ -1,5 +1,6 @@
 <template>
-  <nuxt-link class="text-link" :class="classNames" :to="path" :target="target">{{ text }} -></nuxt-link>
+  <nuxt-link v-if="!external" class="text-link" :class="classNames" :to="path">{{ text }} -></nuxt-link>
+  <a v-else class="text-link" :class="classNames" :href="path" target="_blank">{{ text }} -></a>
 </template>
 <script lang="ts">
 import { Component, Mixins, Prop } from 'vue-property-decorator';
@@ -11,10 +12,6 @@ export default class TextLink extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly text;
   @Prop({ type: String, required: true }) readonly path;
   @Prop({ type: Boolean, required: false, default: false }) readonly external;
-
-  get target(): string{
-    return this.external ? `_blank` : ``;
-  }
 }
 </script>
 <style lang="scss" scoped>

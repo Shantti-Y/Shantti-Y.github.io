@@ -20,7 +20,7 @@ import TextLink from '@/components/atoms/TextLink.vue';
 export default class ExternalLink extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly name;
   @Prop({ type: String, required: true }) readonly iconName;
-  @Prop({ type: String, required: true }) readonly url;
+  @Prop({ type: String, required: false }) readonly url;
   @Prop({ type: String, required: true }) readonly color;
 
   get colorStyle(): object {

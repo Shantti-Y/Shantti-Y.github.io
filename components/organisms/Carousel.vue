@@ -188,7 +188,7 @@ export default class Carousel extends Mixins(ClassName) {
         align-items: center;
         background-color: rgba(160, 160, 160, 0.6);
         bottom: 10px;
-        z-index: 100;
+        z-index: 40;
 
         &:hover {
           transition: all .4s;
