@@ -1,13 +1,13 @@
 <template>
-  <div id="index">
+  <div id="index" class="page">
     <headline text="WELCOME" />
     <sub-headline text="I'm Takahiro yoshioka" />
     <sub-headline text="A full-stack web developer" />
     <paragraph text="Specializing Ruby on Rails and Kotlin web development. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here." />
 
     <div class="link-area">
-      <text-link text="Who are you?" path="/about" />
-      <text-link text="Let me contact you" path="/contact" />
+      <internal-link text="Who are you?" path="/about" />
+      <internal-link text="Let me contact you" path="/contact" />
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ import { Action } from 'vuex-class';
 import Headline from '@/components/molecules/Headline.vue';
 import SubHeadline from '@/components/molecules/SubHeadline.vue';
 import Paragraph from '@/components/molecules/Paragraph.vue';
-import TextLink from '@/components/atoms/TextLink.vue';
+import InternalLink from '@/components/molecules/InternalLink.vue';
 
 @Component({
   head(){
@@ -31,10 +31,10 @@ import TextLink from '@/components/atoms/TextLink.vue';
     Headline,
     SubHeadline,
     Paragraph,
-    TextLink
+    InternalLink
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class IndexPage extends Vue {

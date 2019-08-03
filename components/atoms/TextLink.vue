@@ -19,21 +19,8 @@ export default class TextLink extends Mixins(ClassName) {
 </script>
 <style lang="scss" scoped>
   .text-link {
-    color: #00ff9f;
     text-decoration: none;
     font-size: 15px;
-  }
-
-  @media all and (max-width: 959px) {
-    .text-link {
-      display: block;
-      margin-bottom: 36px;
-    }
-  }
-
-  @media all and (min-width: 960px) {
-    .text-link {
-      margin-right: 50px;
-    }
+    color: inherit;
   }
 </style>

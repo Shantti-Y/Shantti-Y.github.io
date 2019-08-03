@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact" class="page">
     <headline text="CONTACT" />
     <contact-form />
   </div>
@@ -23,7 +23,7 @@ import ContactForm from '@/components/organisms/ContactForm.vue';
     ContactForm
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class ContactPage extends Vue {

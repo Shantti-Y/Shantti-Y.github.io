@@ -1,15 +1,19 @@
 <template>
   <div class="carousel">
     <div class="screen-shots" :style="screenShotsHeightStyle">
-      <div class="slide-button prev" @click="slideToPrev">
+      <div class="slide-button prev-button" :class="{ clicked: leftButtonClicked }" @click="slideToPrev">
         <ion-icon name="ios-arrow-back" :size="45" />
       </div>
-      <div class="slide-button next" @click="slideToNext">
+      <div class="slide-button next-button" :class="{ clicked: rightButtonClicked }" @click="slideToNext">
         <ion-icon name="ios-arrow-forward" :size="45" />
       </div>
       <figure
         class="shot"
-        :class="{ 'with-slide-transition': isSlidable(idx) }"
+        :class="{
+          'with-slide-transition': isSlidable(idx),
+          'prev-shot': isPrevShot(idx),
+          'next-shot': isNextShot(idx)
+        }"
         v-for="(shot, idx) in screenShots"
         :key="idx"
         :style="imagePositionStyle(idx)"
@@ -46,9 +50,12 @@ enum Transition {
 })
 export default class Carousel extends Mixins(ClassName) {
   @Prop({ type: Array, required: true }) readonly screenShots;
-  currentShotIdx = 0;
-  slideDirection = Transition.Inactive;
-  elementWidth = 680;
+  currentShotIdx: number = 0;
+  slideDirection: number = Transition.Inactive;
+  elementWidth: number = 680;
+
+  leftButtonClicked: boolean = false;
+  rightButtonClicked: boolean = false;
 
   get screenShotsHeightStyle (): object {
     return {
@@ -68,8 +75,18 @@ export default class Carousel extends Mixins(ClassName) {
   get prevShotIdx(){
     return this.currentShotIdx === this.minShotIdx ? this.maxShotIdx : this.currentShotIdx - 1 ;
   }
-  get nexrShotIdx(){
+  get nextShotIdx(){
     return this.currentShotIdx === this.maxShotIdx ? this.minShotIdx : this.currentShotIdx + 1 ;
+  }
+
+  @Emit()
+  isPrevShot(idx: number): boolean {
+    return idx === this.prevShotIdx;
+  }
+
+  @Emit()
+  isNextShot(idx: number): boolean {
+    return idx === this.nextShotIdx;
   }
 
   @Emit()
@@ -83,7 +100,7 @@ export default class Carousel extends Mixins(ClassName) {
   }
   @Emit()
   isSlidable(idx: number){
-    return [this.prevShotIdx, this.nexrShotIdx, this.currentShotIdx].includes(idx);
+    return [this.prevShotIdx, this.nextShotIdx, this.currentShotIdx].includes(idx);
   }
   @Emit()
   imagePositionStyle(idx: number): object {
@@ -104,18 +121,26 @@ export default class Carousel extends Mixins(ClassName) {
   @Emit()
   slideToPrev(){
     if(this.slideDirection === Transition.Active) return;
+    this.leftButtonClicked = true;
     const newIdx = this.currentShotIdx - 1;
     this.currentShotIdx = newIdx < this.minShotIdx ? this.maxShotIdx : newIdx;
     this.slideDirection = Transition.Active;
-    setTimeout(() => { this.slideDirection = Transition.Inactive; }, 400);
+    setTimeout(() => {
+      this.slideDirection = Transition.Inactive;
+      this.leftButtonClicked = false;
+    }, 700);
   }
   @Emit()
   slideToNext(){
     if(this.slideDirection === Transition.Active) return;
+    this.rightButtonClicked = true;
     const newIdx = this.currentShotIdx + 1;
     this.currentShotIdx = newIdx > this.maxShotIdx ? this.minShotIdx : newIdx;
     this.slideDirection = Transition.Active;
-    setTimeout(() => { this.slideDirection = Transition.Inactive; }, 400);
+    setTimeout(() => {
+      this.slideDirection = Transition.Inactive;
+      this.rightButtonClicked = false;
+    }, 700);
   }
 
   mounted() {
@@ -133,6 +158,17 @@ export default class Carousel extends Mixins(ClassName) {
 }
 </script>
 <style lang="scss" scoped>
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(51,51,51,1);
+  }
+  to {
+    box-shadow: 0 0 0 1em rgba(51,51,51,0);
+  }
+}
+
+
   .carousel {
     width: 100%;
     max-width: 680px;
@@ -150,17 +186,20 @@ export default class Carousel extends Mixins(ClassName) {
         justify-content: center;
         display: flex;
         align-items: center;
-        background-color: rgba(239, 239, 239, 0.6);
+        background-color: rgba(160, 160, 160, 0.6);
         bottom: 10px;
-        z-index: 10;
-      }
+        z-index: 100;
 
-      .prev {
-        left: 0;
+        &:hover {
+          transition: all .4s;
+          cursor: pointer;
+          background-color: rgba(100, 100, 100, 0.6);
+        }
       }
-
-      .next {
-        right: 0;
+      .prev-button { left: 0; }
+      .next-button { right: 0; }
+      .clicked {
+        animation: pulse 1.0s;
       }
 
       .shot {
@@ -169,7 +208,14 @@ export default class Carousel extends Mixins(ClassName) {
         width: 100%;
         height: 100%;
         flex-shrink: 0;
-        z-index: 0;
+        z-index: -1;
+      }
+      .with-slide-transition {
+        transition: all .7s;
+        z-index: 10;
+      }
+      .prev-shot, .next-shot {
+        z-index: 9;
       }
     }
 

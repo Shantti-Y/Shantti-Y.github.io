@@ -2,7 +2,7 @@
   <div class="desktop-nav-menu" :class="classNames">
     <div class="bar left">
       <div class="element-container">
-          <logo className="element logo" />
+        <nuxt-link to="/"><logo className="element logo" /></nuxt-link>
         <div class="element nav-buttons">
           <nav-button
             v-for="(nav, idx) in navs"
@@ -11,7 +11,6 @@
             :text="nav.text"
           />
         </div>
-        
         <copyright
           className="element copyright"
           :from="copyright.from"
@@ -63,7 +62,7 @@ export default class DesktopNavMenu extends Mixins(ClassName) {
     
     .bar {
       position: fixed;
-      
+      z-index: 10;
       background: rgba(2, 0, 40, 1);
 
       .element-container {

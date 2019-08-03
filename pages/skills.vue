@@ -1,5 +1,5 @@
 <template>
-  <div id="skills">
+  <div id="skills" class="page">
     <headline text="SKILLS" />
     <div class="skill-sets">
       <skill-set
@@ -10,8 +10,8 @@
       />
     </div>
     <div class="link-area">
-      <text-link text="Show what you've done" path="/works" />
-      <text-link text="Let me contact you" path="/contact" />
+      <internal-link text="Show what you've done" path="/works" />
+      <internal-link text="Let me contact you" path="/contact" />
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ import SkillSet from '@/components/organisms/SkillSet.vue';
 import Headline from '@/components/molecules/Headline.vue';
 import SubHeadline from '@/components/molecules/SubHeadline.vue';
 import Paragraph from '@/components/molecules/Paragraph.vue';
-import TextLink from '@/components/atoms/TextLink.vue';
+import InternalLink from '@/components/molecules/InternalLink.vue';
 
 @Component({
   head(){
@@ -37,10 +37,10 @@ import TextLink from '@/components/atoms/TextLink.vue';
     Headline,
     SubHeadline,
     Paragraph,
-    TextLink
+    InternalLink
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class SkillsPage extends Vue {

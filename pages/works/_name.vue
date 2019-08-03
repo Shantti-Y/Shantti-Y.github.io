@@ -1,5 +1,5 @@
 <template>
-  <div id="works-detail">
+  <div id="works-detail" class="page">
     <headline :text="headline" />
     <paragraph className="role" :text="role" />
     <div class="external-links">
@@ -26,8 +26,8 @@
       <paragraph v-for="(tech, idx) in techStacks" :key="idx" className="tech-stacklist-item" :text="tech" />
     </div>
     <div class="link-area">
-      <text-link text="Back to see others" path="/works" />
-      <text-link text="Let me contact you" path="/contact" />
+      <internal-link text="Back to see others" path="/works" />
+      <internal-link text="Let me contact you" path="/contact" />
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ import Headline from '@/components/molecules/Headline.vue';
 import SubHeadline from '@/components/molecules/SubHeadline.vue';
 import Paragraph from '@/components/molecules/Paragraph.vue';
 import ExternalLink from '@/components/molecules/ExternalLink.vue';
-import TextLink from '@/components/atoms/TextLink.vue';
+import InternalLink from '@/components/molecules/InternalLink.vue';
 
 import works from '@/utils/works';
 
@@ -57,7 +57,7 @@ import works from '@/utils/works';
     SubHeadline,
     Paragraph,
     ExternalLink,
-    TextLink
+    InternalLink
   },
   async asyncData({ params }){
     const work = works[params.name];
@@ -74,7 +74,7 @@ import works from '@/utils/works';
     }
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class WorksPage extends Vue {
@@ -132,6 +132,7 @@ export default class WorksPage extends Vue {
   #works-detail {
     .external-links {
       margin-bottom: 40px;
+      height: 100%;
     }
   }
 }

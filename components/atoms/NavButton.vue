@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="nav-button" :class="classNames" :to="to">
+  <nuxt-link class="nav-button" :class="{ ...classNames, active: isSamePath } " :to="to">
     {{ text }}
   </nuxt-link>
 </template>
@@ -13,9 +13,14 @@ import ClassName from '@/components/atoms/ClassName';
 export default class NavButton extends Mixins(ClassName) {
   @Prop({ type: String, required: true }) readonly to;
   @Prop({ type: String, required: true }) readonly text;
+
+  get isSamePath() {
+    return this.$route.path === this.to;
+  }
 }
 </script>
 <style lang="scss" scoped>
+
 .nav-button {
   font-size: 18px;
   font-weight: bold;
@@ -33,6 +38,14 @@ export default class NavButton extends Mixins(ClassName) {
     background-color: #00ff9f;
     color: #020028;
     transition: .3s;
+  }
+}
+.active {
+  background-color: #00ff9f;
+  color: #020028;
+
+  &:hover {
+    cursor: default;
   }
 }
 </style>

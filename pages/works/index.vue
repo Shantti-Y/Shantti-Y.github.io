@@ -1,5 +1,5 @@
 <template>
-  <div id="works">
+  <div id="works" class="page">
     <headline text="WORKS" />
     <div class="work-set">
       <nuxt-link
@@ -16,7 +16,7 @@
       </nuxt-link>
     </div>
     <div class="link-area">
-      <text-link text="Let me contact you" path="/contact" />
+      <internal-link text="Let me contact you" path="/contact" />
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ import { Action } from 'vuex-class';
 
 import Headline from '@/components/molecules/Headline.vue';
 import TonedImage from '@/components/molecules/TonedImage.vue';
-import TextLink from '@/components/atoms/TextLink.vue';
+import InternalLink from '@/components/molecules/InternalLink.vue';
 
 import works from '@/utils/works';
 
@@ -40,10 +40,10 @@ import works from '@/utils/works';
   components: {
     Headline,
     TonedImage, 
-    TextLink
+    InternalLink
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class WorksPage extends Vue {

@@ -1,5 +1,5 @@
 <template>
-  <div id="about">
+  <div id="about" class="page">
     <headline text="ABOUT" />
     <paragraph text="I'm Takahiro Yoshioka. You can call me like 'Taka', 'Shantti-Y'." />
     <paragraph text="I've been working as a Full-stack Web Developer in Japan for more than one year so that familiar with building a bridge between client-side and server-side." />
@@ -7,8 +7,8 @@
     <sub-headline text="Career" />
     <timeline />
     <div class="link-area">
-      <text-link text="So, what can you do?" path="/skills" />
-      <text-link text="Let me contact you" path="/contact" />
+      <internal-link text="So, what can you do?" path="/skills" />
+      <internal-link text="Let me contact you" path="/contact" />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ import Timeline from '@/components/organisms/Timeline.vue';
 import Headline from '@/components/molecules/Headline.vue';
 import SubHeadline from '@/components/molecules/SubHeadline.vue';
 import Paragraph from '@/components/molecules/Paragraph.vue';
-import TextLink from '@/components/atoms/TextLink.vue';
+import InternalLink from '@/components/molecules/InternalLink.vue';
 
 @Component({
   head(){
@@ -34,10 +34,10 @@ import TextLink from '@/components/atoms/TextLink.vue';
     Headline,
     SubHeadline,
     Paragraph,
-    TextLink
+    InternalLink
   },
   transition: {
-    name: 'default'
+    name: 'fade'
   }
 })
 export default class AboutPage extends Vue {

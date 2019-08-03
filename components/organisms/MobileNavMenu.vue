@@ -1,16 +1,16 @@
 <template>
-
   <div class="mobile-nav-menu" :class="classNames">
     <div class="navbar">
       <div class="menu-opener" @click="toggleOpened">
-        <ion-icon className="menu-icon" name="md-reorder" :size="45" />
+        <ion-icon className="menu-icon" name="md-reorder" :size="45" v-show="!opened" />
+        <ion-icon className="menu-icon" name="md-close" :size="45" v-show="opened" />
       </div>
       <div class="logo-wrapper">
         <logo className="logo" />
       </div>
     </div>
     <transition name="expand">
-      <div class="nav-background" :class="{ active: opened }" v-show="opened">
+      <div class="nav-background" v-show="opened">
         <div class="nav-contents">
           <div class="nav-buttons">
             <div @click="toggleOpened">
@@ -71,7 +71,6 @@ export default class MobileNavMenu extends Mixins(ClassName) {
 
   @Emit()
   toggleOpened(){
-    console.log(this.opened)
     this.opened = !this.opened;
   }
   
@@ -81,6 +80,11 @@ export default class MobileNavMenu extends Mixins(ClassName) {
   .mobile-nav-menu {
     transition: height 200ms;
     overflow: hidden;
+    .menu-opener {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .menu-icon {
       padding: 5px;
       position: fixed;
@@ -104,21 +108,15 @@ export default class MobileNavMenu extends Mixins(ClassName) {
     }
 
     .nav-background {
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
-      transition: all .5s;
-      width: 0;
-      height: 0;
       z-index: 90;
       position: fixed;
       background: rgba(2, 0, 40, 1);
     }
-    .active {
-      width: 100vw;
-      height: 100vh;
-    }
 
     .nav-contents {
-      transition: all .9s;
       height: 100vh;
       width: 100vw;
       z-index: 90;
@@ -157,12 +155,11 @@ export default class MobileNavMenu extends Mixins(ClassName) {
     }
   }
  .expand-enter-active, .expand-leave-active {
-    transition: all .5s;
+    transition: all .2s;
+    opacity: 1;
   }
-  .expand-enter, .expand-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transition: all .5s;
-    height: 0;
-    width: 0;
+  .expand-enter, .expand-leave-to {
+    opacity: 0;
   }
 
   @media all and (max-width: 959px) {
