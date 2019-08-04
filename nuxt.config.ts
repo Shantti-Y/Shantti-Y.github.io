@@ -32,7 +32,8 @@ const config: NuxtConfiguration = {
   modules: [
     '@nuxtjs/dotenv',
     'nuxt-svg'
-  ]
+  ],
+  mode: 'universal'
 };
 
 export default config;
