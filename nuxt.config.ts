@@ -33,7 +33,15 @@ const config: NuxtConfiguration = {
     '@nuxtjs/dotenv',
     'nuxt-svg'
   ],
-  mode: 'universal'
+  generate: {
+    routes: [
+      '/works/nikocale',
+      '/works/setlify',
+      '/works/yakukyari',
+      '/works/dealxpert',
+      '/works/portfolio'
+    ]
+  }
 };
 
 export default config;
