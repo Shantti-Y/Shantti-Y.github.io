@@ -4,7 +4,7 @@
 
 This is my personal portfolio for showing front and back-end development skills.
 
-Here is the website 👉 https://friendly-keller-883efa.netlify.com
+Here is the website 👉 https://shanttiy.netlify.com
 
 ## Tech Stacks
 
