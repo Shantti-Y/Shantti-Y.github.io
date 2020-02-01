@@ -10,8 +10,8 @@
       />
     </div>
     <div class="link-area">
-      <internal-link text="Show what you've done" path="/works" />
-      <internal-link text="Let me contact you" path="/contact" />
+      <internal-link text="今まで開発してきたものをみる" path="/works" />
+      <internal-link text="連絡をとる" path="/contact" />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="toned-image" :class="classNames">
     <div class="work-image-container" :style="imageHeightStyle">
-      <typography className="typography see-this-work" variant="h4" text="See this work" />
+      <typography className="typography see-this-work" variant="h4" text="詳細を見る" />
       <work-image className="work-image" :src="imgSrc" :alt="name" />
     </div>
     <div class="work-header">

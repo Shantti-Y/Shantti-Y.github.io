@@ -2,7 +2,7 @@ import { Work } from '@/utils/works';
 
 const work: Work = {
   headline: 'Setlify',
-  role: 'Front, Back-end Development (Private)',
+  role: 'フロントエンド中心のWeb開発(個人開発)',
   websiteUrl: 'https://setlify-236901.appspot.com',
   githubUrl: 'https://github.com/Shantti-Y/SetList',
   screenShots: [
@@ -13,8 +13,8 @@ const work: Work = {
     { src: require('@/assets/images/works/setlify/mobile2.jpg'), alt: 'setlify-pic-5' },
     { src: require('@/assets/images/works/setlify/mobile3.jpg'), alt: 'setlify-pic-6' }
   ],
-  overview: "Setlify is a instant Spotify playlist creator. What you needs are only three things. Your Spotify account, playlist's duration, and your favorite words.",
-  background: "This is a personal work. I have done all the things that application needs to learn how web applications are developed and are deployed in public. In this application, I used a modern JavaScript syntax, frameworks, and GCP for deployment.",
+  overview: "SetlifyはSpotify用のプレイリストを即席で作成してくれるツールです。必要なのはあなたのSpotifyアカウント、プレイリストの総再生時間、そして好きな言葉です。",
+  background: "基本的に個人開発では普段業務で触れない・聞いたことないような技術やツールを使うのを目的としているのですが、Setlifyもその一つです。今回の場合、特にGCPにさわれたのが大きな成長かなと感じています。",
   techStacks: [
     "HTML5",
     "CSS3",
@@ -25,7 +25,7 @@ const work: Work = {
     "Webpack",
     "Spotify API",
   ],
-  roleShort: 'Design / Web Development',
+  roleShort: 'Web開発/設計',
   thumbnail: require('@/assets/images/works/setlify/desktop1.jpg'),
 };
 

@@ -31,8 +31,8 @@ export default class TextareaField extends Mixins(ClassName) {
 
   // TODO: validation messages must be provided by functions
   get errorMessage(): string {
-    if(this.field === 'email') return `${this.field} must be filled or has invalid format.`;
-    return `${this.field} must be filled.`;
+    if(this.field === 'Eメールアドレス') return `${this.field}を正しいフォーマットで入力してください`;
+    return `${this.field}を入力してください`;
   }
 }
 </script>

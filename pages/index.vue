@@ -1,13 +1,13 @@
 <template>
   <div id="index" class="page">
     <headline text="WELCOME" />
-    <sub-headline text="I'm Takahiro yoshioka" />
-    <sub-headline text="A full-stack web developer" />
-    <paragraph text="Specializing Ruby on Rails and Kotlin web development. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here." />
+    <sub-headline text="Takahiro Yoshioka's portfolio" />
+    <sub-headline text="Web Engineer" />
+    <paragraph text="フロント・バックエンドを中心Web系開発をしているエンジニアです。自主開発でビジネスを実施している企業で主に新機能の追加・開発を行なっています。" />
 
     <div class="link-area">
-      <internal-link text="Who are you?" path="/about" />
-      <internal-link text="Let me contact you" path="/contact" />
+      <internal-link text="経歴について見る" path="/about" />
+      <internal-link text="連絡をとる" path="/contact" />
     </div>
   </div>
 </template>

@@ -1,14 +1,14 @@
 <template>
   <div id="about" class="page">
     <headline text="ABOUT" />
-    <paragraph text="I'm Takahiro Yoshioka. You can call me like 'Taka', 'Shantti-Y'." />
-    <paragraph text="I've been working as a Full-stack Web Developer in Japan for more than one year so that familiar with building a bridge between client-side and server-side." />
-    <paragraph text="My mission is to create applications with dynamic, intuitive, and great user-interfaces in a component based architecture using virtual DOM frameworks such as Vue.js or React... etc." />
+    <paragraph text="はじめまして！平成4年生まれの吉岡と申します。(Web上ではShantti-Y(シャンティワイ)と名乗っています)。" />
+    <paragraph text="2018年にWeb系の自社開発企業に入社し、現在はWebエンジニアとして働いています。ソフトウェア開発全体においては主に新機能開発の要件定義、設計、コーディングなど幅広く担当し、プログラミングにおいてはサーバサイド、クライアントサイドに携わっています。" />
+    <paragraph text="新しい技術に触れるのはもちろんですが、「その技術で何ができるのか」「実践したらどうなるのか」という課題解決が好きで、開発の上流〜下流まで携われるお仕事に就ければと考えています。" />
     <sub-headline text="Career" />
     <timeline />
     <div class="link-area">
-      <internal-link text="So, what can you do?" path="/skills" />
-      <internal-link text="Let me contact you" path="/contact" />
+      <internal-link text="スキルを見る" path="/skills" />
+      <internal-link text="連絡をとる" path="/contact" />
     </div>
   </div>
 </template>

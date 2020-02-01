@@ -2,15 +2,15 @@ import { Work } from '@/utils/works';
 
 const work: Work = {
   headline: 'DealXpert',
-  role: 'Front, Back-end Development, Database Design',
+  role: 'フロント・バックエンド開発、DB設計',
   screenShots: [
     { src: require('@/assets/images/works/dealxpert/desktop1.jpg'), alt: 'dealxpert-pic-1' },
     { src: require('@/assets/images/works/dealxpert/desktop2.jpg'), alt: 'dealxpert-pic-2' },
     { src: require('@/assets/images/works/dealxpert/desktop3.jpg'), alt: 'dealxpert-pic-3' },
     { src: require('@/assets/images/works/dealxpert/desktop4.jpg'), alt: 'dealxpert-pic-4' }
   ],
-  overview: "DealXpert is a sales process management system which targets to B2B companies. Not only it records a business person's client information and their relationships, but also shows effective solutions to navigate complex deals to win.",
-  background: "I have joined for the half of a year since the begining of this project. What I did were application development in both sides(front-end, back-end) and first version of database design. So that this application has been released in some closed users.",
+  overview: "DealXpertは法人向けの営業管理システムです。顧客情報の管理にとどまらず、彼らとの関係をよりよくし、利益を勝ち取る為の解決策を導き出していきます。",
+  background: "転職活動をしていた半年間、知人を通してアルバイトとして参加していたプロジェクトです。ここで主に実施していたのはフロント・バックエンドの開発、初期段階のDB設計です。半年間の間でこのアプリをイベントに出店し、クローズドユーザを獲得するに至りました。",
   techStacks: [
     "HTML5",
     "CSS3",
@@ -23,7 +23,7 @@ const work: Work = {
     "Webpack",
     "PostgreSql"
   ],
-  roleShort: 'Web Development',
+  roleShort: 'Web開発',
   thumbnail: require('@/assets/images/works/dealxpert/desktop1.jpg'),
 };
 

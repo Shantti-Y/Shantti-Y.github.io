@@ -1,8 +1,8 @@
 import { Work } from '@/utils/works';
 
 const work: Work = {
-  headline: 'Yakukyari',
-  role: 'Front, Back-end Development, Operator',
+  headline: '薬キャリ',
+  role: 'フロント・バックエンド開発、データメンテナンス、リリース含む全体的なアプリの運用',
   websiteUrl: 'https://pcareer.m3.com',
   screenShots: [
     { src: require('@/assets/images/works/yakukyari/desktop1.jpg'), alt: 'yakukyari-pic-1' },
@@ -12,8 +12,8 @@ const work: Work = {
     { src: require('@/assets/images/works/yakukyari/mobile2.jpg'), alt: 'yakukyari-pic-5' },
     { src: require('@/assets/images/works/yakukyari/mobile3.jpg'), alt: 'yakukyari-pic-6' }
   ],
-  overview: "Yakukyari is one of the largest job finding website for pharmacists in Japan. The biggest feature is it publishes job postings of other recruitment agencies so that it functions as pharmacist's portal website.",
-  background: "I have joined M3 Career Co. as a full-stack web developer for two years to renew front design and create new features. During this project, I replaced legacy techs with vue.js to implement new inquiry form which is the core for M3 Career's business and add Web Worker for Page Speed Insight score improvement.",
+  overview: "薬キャリは日本で規模の大きい薬剤師専門転職サイトの一つです。主に自社含めた多くの薬剤師専門転職エージェント企業の求人を掲載しているのが最大の特徴です。",
+  background: "私がM3キャリアで携わっている中で最もビジネスインパクトの大きいアプリです。ここでは主により多くの薬剤師に訪問してもらう為の新機能開発や運用工数削減の為の改善施策を担当しています。その中でも規模の大きかった開発はレガシーjsの撤廃と新サービスの立ち上げです。前者はknockout.js -> vue.jsのリプレースをメインに、後者はDB設計や複数アプリと連携する為の機構作りを担当していました。",
   techStacks: [
     "HTML5",
     "CSS3",
@@ -26,7 +26,7 @@ const work: Work = {
     "Webpack",
     "PostgreSql"
   ],
-  roleShort: 'Web Development',
+  roleShort: 'Web開発',
   thumbnail: require('@/assets/images/works/yakukyari/desktop1.jpg'),
 };
 

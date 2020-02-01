@@ -1,8 +1,8 @@
 import { Work } from '@/utils/works';
 
 const work: Work = {
-  headline: 'Portfolio',
-  role: 'Design / Web Development (Private)',
+  headline: 'ポートフォリオ',
+  role: 'Web開発/設計(個人開発)',
   githubUrl: "https://github.com/Shantti-Y/Shantti-Y.github.io",
   websiteUrl: "https://shanttiy.netlify.com",
   screenShots: [
@@ -11,8 +11,8 @@ const work: Work = {
     { src: require('@/assets/images/works/portfolio/mobile1.jpg'), alt: 'portfolio-pic-3' },
     { src: require('@/assets/images/works/portfolio/mobile2.jpg'), alt: 'portfolio-pic-4' }
   ],
-  overview: "My portfolio site. This design is inspired by the concept of cyberpunk.",
-  background: "Also, I want you to look at my portfolio site as one of my works. This is used as an experiment for new techs, and new tools.",
+  overview: "私のポートフォリオサイトです。サイバーパンクをイメージしたデザインにしています。",
+  background: "自分の履歴や開発実績についてただ載せるだけでなく、新しい技術・ツールの実験場としても運用しています。",
   techStacks: [
     "HTML5",
     "CSS3",
@@ -23,7 +23,7 @@ const work: Work = {
     "Nuxt.js",
     "TypeScript"
   ],
-  roleShort: 'Design / Web Development',
+  roleShort: 'Web開発/設計',
   thumbnail: require('@/assets/images/works/portfolio/desktop1.jpg'),
 };
 

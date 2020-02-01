@@ -1,8 +1,8 @@
 import { Work } from '@/utils/works';
 
 const work: Work = {
-  headline: 'Nikocale',
-  role: 'Web Development / Design, Database Architecture (Personal)',
+  headline: 'ニコカレ',
+  role: 'Web開発/DB含むアプリ設計(個人開発)',
   githubUrl: 'https://github.com/Shantti-Y/Chalendiary',
   websiteUrl: 'https://nikocale.com',
   screenShots: [
@@ -15,8 +15,8 @@ const work: Work = {
     { src: require('@/assets/images/works/nikocale/mobile3.jpg'), alt: 'nikocale-7' },
     { src: require('@/assets/images/works/nikocale/mobile4.jpg'), alt: 'nikocale-8' }
   ],
-  overview: "Nikocale stands for 'Niko-niko Calendar' which visualizes the mood and morale of members in the team/organization (Wikipedia). This software can make communication among the group smooth.",
-  background: "When I had been working at M3 Career Co., there was a old version of Nikocale which is operated in Google Spreadsheet. However, I've got motivated to create it as a web application because of many reasons (making it more convinient, implementing new technologies which I don't know). It is created by only me with Websocket, Firebase, and React-redux.",
+  overview: "ニコカレは'ニコニコカレンダー'の略称で、組織/チームの士気やメンバーの気持ちを見える化するツールです(wikipediaより)。",
+  background: "Web系企業に勤務していた時に「社内の範囲であれば個人開発したツールを導入してもいい」という話があり、Firebase、WebSocker、React-Reduxのような普段業務で使わない技術・ツールを使うのにちょうどいい機会だと思い作りました。",
   techStacks: [
     "HTML5",
     "CSS3",
@@ -31,7 +31,7 @@ const work: Work = {
     "Firebase",
     "Websocket"
   ],
-  roleShort: 'Design / Web Development',
+  roleShort: 'Web開発/設計',
   thumbnail: require('@/assets/images/works/nikocale/desktop2.jpg'),
 }
 

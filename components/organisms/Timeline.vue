@@ -2,26 +2,26 @@
   <div class="timeline" :class="classNames" >
     <div class="timeline-progress odd">
       <div class="timeline-event">
-        <typography className="timeline-date" variant="h5" text="MARCH 2016" />
-        <typography className="timeline-topic" variant="h4" text="Graduated Tokai University in Japan" />
+        <typography className="timeline-date" variant="h5" text="2016年3月" />
+        <typography className="timeline-topic" variant="h4" text="東海大学を卒業" />
       </div>
     </div>
     <div class="timeline-progress even">
       <div class="timeline-event">
-        <typography className="timeline-date" variant="h5" text="APRIL 2016" />
-        <typography className="timeline-topic" variant="h4" text="Started working at Oiles Corp. As a production engineer " />
+        <typography className="timeline-date" variant="h5" text="2016年4月" />
+        <typography className="timeline-topic" variant="h4" text="オイレス工業（株）に就職" />
       </div>
     </div>
     <div class="timeline-progress odd">
       <div class="timeline-event">
-        <typography className="timeline-date" variant="h5" text="MARCH 2018" />
-        <typography className="timeline-topic" variant="h4" text="Quit Oiles Corp." />
+        <typography className="timeline-date" variant="h5" text="2018年3月" />
+        <typography className="timeline-topic" variant="h4" text="オイレス工業（株）を退職" />
       </div>
     </div>
     <div class="timeline-progress even">
       <div class="timeline-event">
-        <typography className="timeline-date" variant="h5" text="APRIL 2018" />
-        <typography className="timeline-topic" variant="h4" text="Started working at M3 Career.co As a Web Developer" />
+        <typography className="timeline-date" variant="h5" text="2018年4月" />
+        <typography className="timeline-topic" variant="h4" text="M3キャリア（株）にWebエンジニアとして就職" />
       </div>
     </div>
   </div>

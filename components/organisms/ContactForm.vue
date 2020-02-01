@@ -8,26 +8,26 @@
     >
       <text-field
         className="field"
-        field="name"
+        field="氏名"
         :valid="isValidName"
         :value="form.name"
         @update:value="newValue => updateValue('name', newValue)"
       />
       <text-field
         className="field"
-        field="email"
+        field="Eメールアドレス"
         :valid="isValidEmail" 
         :value="form.email"
         @update:value="newValue => updateValue('email', newValue)"
       />
       <textarea-field
         className="field"
-        field="message"
+        field="メッセージ"
         :valid="isValidMessage"
         :value="form.message"
         @update:value="newValue => updateValue('message', newValue)"
       />
-      <submit-button text="Send Mail" @submit="() => sendMailToMe()" />
+      <submit-button text="メール送信" @submit="() => sendMailToMe()" />
     </form>
   </div>
 </template>

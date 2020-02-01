@@ -16,7 +16,7 @@
       </nuxt-link>
     </div>
     <div class="link-area">
-      <internal-link text="Let me contact you" path="/contact" />
+      <internal-link text="連絡をとる" path="/contact" />
     </div>
   </div>
 </template>

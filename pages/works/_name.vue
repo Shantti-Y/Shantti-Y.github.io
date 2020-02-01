@@ -4,13 +4,13 @@
     <paragraph className="role" :text="role" />
     <div class="external-links">
       <external-link
-        name="Visit Github Repo"
+        name="Githubリポジトリを見る"
         iconName="logo-github"
         :url="githubUrl"
         color="rgba(175, 83, 255, 1)"
       />
       <external-link
-        name="Visit Website"
+        name="Webサイトを見る"
         iconName="ios-link"
         :url="websiteUrl"
         color="rgba(61, 113, 255, 1)"
@@ -26,8 +26,8 @@
       <paragraph v-for="(tech, idx) in techStacks" :key="idx" className="tech-stacklist-item" :text="tech" />
     </div>
     <div class="link-area">
-      <internal-link text="Back to see others" path="/works" />
-      <internal-link text="Let me contact you" path="/contact" />
+      <internal-link text="開発実績一覧に戻る" path="/works" />
+      <internal-link text="連絡をとる" path="/contact" />
     </div>
   </div>
 </template>
