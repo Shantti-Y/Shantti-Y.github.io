@@ -1,6 +1,7 @@
 import yakukyari from '@/utils/works/yakukyari';
 import dealxpert from '@/utils/works/dealxpert';
 import portfolio from '@/utils/works/portfolio';
+import shishiron from '@/utils/works/shishiron';
 
 export interface Work {
   headline: string,
@@ -16,5 +17,5 @@ export interface Work {
 }
 
 export default {
-  yakukyari, dealxpert, portfolio
+  yakukyari, dealxpert, shishiron, portfolio
 };
